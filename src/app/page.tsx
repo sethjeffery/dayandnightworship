@@ -23,6 +23,17 @@ export default function Home() {
         en louange, prophétie, intercession, sensibilité
       </SevenDaysHeader>
 
+      <div className="my-16 text-center border-b-2 pb-16 max-w-screen-md mx-auto border-stone-300">
+        <p className="text-4xl">21 à 28 d&rsquo;Avril</p>
+        <p className="text-xl mt-4">
+          Domaine de Laouenekaat
+          <br />
+          29 B Rte de Kergoff
+          <br />
+          56730 Saint-Gildas-de-Rhuys
+        </p>
+      </div>
+
       <Person
         name="Seth & Ana Jeffery"
         image={sethAndAnaOutside}
