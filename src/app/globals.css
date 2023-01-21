@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .table-pricing {
+    border-collapse: separate;
+    border-spacing: 0.125rem;
+    margin: auto;
+  }
+  .table-pricing tbody td,
+  .table-pricing thead th:not(:first-child),
+  .table-pricing tbody th {
+    border: solid 1px transparent;
+    background-color: rgb(231 229 228 / var(--tw-bg-opacity));
+    padding: 0.5rem 1.5rem;
+    vertical-align: middle;
+  }
+  .table-pricing thead th:nth-child(2) {
+    border-top-left-radius: 1rem;
+  }
+  .table-pricing thead th:last-child {
+    border-top-right-radius: 1rem;
+  }
+  .table-pricing tbody tr:first-child th:first-child {
+    border-top-left-radius: 1rem;
+  }
+  .table-pricing tbody tr:last-child th:first-child {
+    border-bottom-left-radius: 1rem;
+  }
+  .table-pricing tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 1rem;
+  }
+  .table-pricing thead th {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  .table-pricing tbody th {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  .table-pricing tbody td {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .table-pricing tbody td svg {
+    margin: auto;
+  }
+  .table-pricing tfoot td {
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 0.25rem 1rem;
+  }
+}
+
+@layer base {
+  body {
+    background-color: #f2f2f2;
+  }
+}
+
+@layer utilities {
+  .animate-button-ping-primary {
+    animation: button-ping-primary 2s infinite;
+  }
+  .animate-button-ping-secondary {
+    animation: button-ping-secondary 2s infinite;
+  }
+}
+
+@keyframes button-ping-primary {
+  0% {
+    box-shadow: 0 0 0 0 #eb7a00;
+  }
+  50% {
+    box-shadow: 0 0 25px 4px rgba(235, 122, 0, 0);
+  }
+}
+
+@keyframes button-ping-secondary {
+  0% {
+    box-shadow: 0 0 0 0 #006aeb;
+  }
+  50% {
+    box-shadow: 0 0 25px 4px rgba(0, 106, 235, 0);
+  }
+}
