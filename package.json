@@ -4,7 +4,7 @@
   "description": "Day and Night Worship",
   "main": "index.js",
   "engines": {
-    "node": "^16.0.0",
+    "node": "^16.0.0 || ^17.0.0 || ^18.0.0",
     "npm": "^8.0.0"
   },
   "scripts": {
