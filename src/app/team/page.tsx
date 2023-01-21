@@ -10,7 +10,7 @@ export default function Team() {
       <PictureBlock
         image={instrumentsOrange}
         alt="Instruments and people"
-        title="Team"
+        title="Équipe"
       />
 
       <Person

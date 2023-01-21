@@ -20,7 +20,7 @@ function PricingMobileItem({
         <div>
           <Tick width="24" height="24" className="mx-auto" />
         </div>
-        <div>Teaching</div>
+        <div>Formation</div>
         <div>
           {accommodation ? (
             <Tick width="24" height="24" className="mx-auto" />
@@ -28,9 +28,9 @@ function PricingMobileItem({
             <Cross width="24" height="24" className="mx-auto" />
           )}
         </div>
-        <div>Accommodation</div>
+        <div>Hébergement</div>
         <div className="font-bold text-center">{meals}</div>
-        <div>Meals</div>
+        <div>Repas</div>
       </div>
     </div>
   );
@@ -41,7 +41,7 @@ export default function Pricing() {
     <>
       <PictureBlock
         image={buildingOrange}
-        title="Pricing"
+        title="Prix"
         alt="Domaine de Laouenekaat building"
       />
 
@@ -71,7 +71,7 @@ export default function Pricing() {
           </thead>
           <tbody>
             <tr>
-              <th>Teaching</th>
+              <th>Formation</th>
               <td>
                 <Tick width="32" height="32" />
               </td>
@@ -112,8 +112,8 @@ export default function Pricing() {
             <td></td>
             <td></td>
             <td></td>
-            <td>3-12 years</td>
-            <td>0-2 years</td>
+            <td>3-12 ans</td>
+            <td>0-2 ans</td>
           </tfoot>
         </table>
       </div>
