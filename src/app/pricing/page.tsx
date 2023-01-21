@@ -47,8 +47,9 @@ export default function Pricing() {
 
       <div className="my-16 max-w-screen-md mx-auto px-8 text-xl md:text-3xl">
         <p>
-          The full cost per student is <strong>€ 500</strong> for the week. We
-          also have a reduced rate for attendees that do not need accommodation.
+          Le coût total par étudiant est de <strong>€ 500</strong> pour la
+          semaine. Nous avons également un tarif réduit pour les participants
+          qui n&rsquo;auront pas besoin d&rsquo;hébergement.
         </p>
       </div>
 
@@ -85,14 +86,14 @@ export default function Pricing() {
               </td>
             </tr>
             <tr>
-              <th>Meals</th>
+              <th>Repas</th>
               <td>3</td>
               <td>2</td>
               <td>3</td>
               <td>3</td>
             </tr>
             <tr>
-              <th>Accommodation</th>
+              <th>Hébergement</th>
               <td>
                 <Tick width="32" height="32" />
               </td>
@@ -119,8 +120,9 @@ export default function Pricing() {
 
       <div className="my-16 max-w-screen-md mx-auto px-8 text-xl md:text-2xl">
         <p>
-          Young children are welcomed at half price, and there is a play room,
-          but please note that we do not have dedicated child care.
+          Les jeunes enfants sont accueillis à moitié prix, et il y a une salle
+          de jeux, mais veuillez noter que nous n&rsquo;avons pas de garderie
+          dédiée.
         </p>
       </div>
 

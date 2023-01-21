@@ -11,15 +11,15 @@ interface NavbarItem {
 const navbarItems: NavbarItem[] = [
   {
     href: "/",
-    text: "Home",
+    text: "Accueil",
   },
   {
     href: "/team",
-    text: "Team",
+    text: "Équipe",
   },
   {
     href: "/pricing",
-    text: "Pricing",
+    text: "Prix",
   },
 ];
 

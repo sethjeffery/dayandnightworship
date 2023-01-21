@@ -19,8 +19,8 @@ export default function Home() {
         title="Day and Night Worship"
       />
 
-      <SevenDaysHeader title="7 days of deep training">
-        in worship, prophecy, intercession, sensitivity
+      <SevenDaysHeader title="7 jours de formation approfondie">
+        en louange, prophétie, intercession, sensibilité
       </SevenDaysHeader>
 
       <Person
@@ -30,22 +30,22 @@ export default function Home() {
         quote
       >
         <p>
-          We believe that through worship we encounter God in a way that
-          radically transforms us and brings much glory to Him. Our desire is to
-          show others how to get to that place of encountering God through
-          worship.
+          Nous croyons qu&rsquo;à travers la louange, nous rencontrons Dieu
+          d&rsquo;une manière qui nous transforme radicalement et lui apporte
+          beaucoup de gloire. Notre désir est de montrer aux autres comment
+          arriver à ce lieu de rencontre avec Dieu par la louange.
         </p>
         <p className="mt-8">
-          These moments of encounter allow us to receive wonderful gifts,
-          empowerment and anointing which will bless others. But our primary
-          goal will always be Him alone.
+          Ces moments de rencontre permettent de recevoir de merveilleux dons,
+          une habilitation et une onction qui béniront les autres. Mais notre
+          objectif principal sera toujours Lui seul.
         </p>
       </Person>
 
       <PictureBlock image={tableOrange} alt="Friends at table" />
 
-      <SevenDaysHeader title="7 days of community">
-        living together, growing together
+      <SevenDaysHeader title="7 jours de communauté">
+        vivre ensemble, grandir ensemble
       </SevenDaysHeader>
 
       <div className="flex mx-auto items-center justify-center flex-col md:flex-row px-4">
@@ -53,8 +53,8 @@ export default function Home() {
           className="flex-1 text-xl text-center md:text-right border-b-4 md:border-r-4 md:border-b-0 border-stone-200 p-4 leading-8 relative
             before:absolute before:left-0 before:right-0 before:bottom-0 md:before:left-[inherit] md:before:top-0 before:border-x-4 md:before:border-x-0 md:before:border-y-4 before:border-stone-200 before:h-8 md:before:h-[inherit] md:before:w-8"
         >
-          <li>Accommodation included</li>
-          <li>Meals included</li>
+          <li>Hébergement inclus</li>
+          <li>Repas inclus</li>
         </ul>
         <div className="border-l-4 md:border-t-4 md:border-l-0 border-stone-200 h-8 md:w-4 lg:w-16 md:h-0"></div>
         <div className="rounded-full bg-stone-200 p-8">
@@ -65,37 +65,37 @@ export default function Home() {
           className="flex-1 text-xl text-center md:text-left border-t-4 md:border-t-0 md:border-l-4 border-stone-200 p-4 leading-8 relative
             before:absolute before:left-0 before:right-0 before:bottom-0 md:before:right-[inherit] before:top-0 before:border-x-4 md:before:border-x-0 md:before:border-y-4 before:border-stone-200 before:h-8 md:before:h-[inherit] md:before:w-8"
         >
-          <li>Worship times</li>
-          <li>Godly friendships</li>
-          <li>Living in community</li>
-          <li>Honouring the Holy Spirit</li>
+          <li>Temps de louange</li>
+          <li>Amitiés divines</li>
+          <li>Vivre en communauté</li>
+          <li>Honorer le Saint-Esprit</li>
         </ul>
       </div>
 
       <blockquote className="my-16 max-w-screen-lg text-2xl mx-auto text-center px-4">
         <div>
-          &ldquo;When the day of Pentecost came, they were all{" "}
-          <strong>together in one place</strong>.&rdquo;
+          &ldquo;Quand le jour de la Pentecôte arriva, ils étaient tous{" "}
+          <strong>ensemble au même endroit</strong>.&rdquo;
         </div>
         <cite className="text-4xl">Acts 2:1</cite>
       </blockquote>
 
       <PictureBlock image={lakeOrange} alt="Peaceful lake" />
 
-      <SevenDaysHeader title="7 days of refreshment">
-        to bring fresh worship to France
+      <SevenDaysHeader title="7 jours de rafraîchissement">
+        pour rafraîchir notre louange à Dieu
       </SevenDaysHeader>
 
       <div className="my-16 text-2xl max-w-screen-md px-8 mx-auto">
         <p>
-          The Lord is both a tongue of fire and a still small voice, and we meet
-          with Him in both the noise and in the silence — in times of tight
-          community and times of solitude.
+          Le Seigneur est à la fois une langue de feu et une petite voix douce,
+          et nous le rencontrons à la fois dans le bruit et dans le silence, en
+          temps de forte communauté et en temps de solitude.
         </p>
         <p className="mt-8">
-          For this, we have chosen a location where we can not only worship
-          together, but also spend quiet times developing our personal
-          connection with the Holy Spirit.
+          Pour cela, nous avons choisi un endroit où nous pouvons non seulement
+          louer ensemble, mais aussi passer des moments calmes en développant
+          notre connexion personnelle avec le Saint-Esprit.
         </p>
         <div className="relative my-8">
           <div className="absolute rotate-1 top-0 left-0 w-full h-full shadow-lg bg-stone-100"></div>
@@ -111,7 +111,7 @@ export default function Home() {
               >
                 Plage de Kercambre
               </a>{" "}
-              is just 10 minutes walk from{" "}
+              n&rsquo;est qu&rsquo;à 10 min à pied de{" "}
               <a
                 href="https://goo.gl/maps/hZfbibhZd2DmKcry8"
                 target="_blank"
