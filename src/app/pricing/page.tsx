@@ -47,9 +47,10 @@ export default function Pricing() {
 
       <div className="my-16 max-w-screen-md mx-auto px-8 text-xl md:text-3xl">
         <p>
-          Le coût total par étudiant est de <strong>€ 500</strong> pour la
-          semaine. Nous avons également un tarif réduit pour les participants
-          qui n&rsquo;auront pas besoin d&rsquo;hébergement.
+          Le coût total par étudiant est de{" "}
+          <strong className="whitespace-nowrap">€ 500</strong> pour la semaine.
+          Nous avons également un tarif réduit pour les participants qui
+          n&rsquo;auront pas besoin d&rsquo;hébergement.
         </p>
       </div>
 

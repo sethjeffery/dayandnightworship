@@ -94,7 +94,7 @@ export default function Home() {
       <PictureBlock image={lakeOrange} alt="Peaceful lake" />
 
       <SevenDaysHeader title="7 jours de rafraîchissement">
-        pour rafraîchir notre louange à Dieu
+        pour rafraîchir notre relation avec Dieu
       </SevenDaysHeader>
 
       <div className="my-16 text-2xl max-w-screen-md px-8 mx-auto">

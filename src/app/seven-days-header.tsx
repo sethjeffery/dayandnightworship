@@ -10,7 +10,7 @@ export default function SevenDaysHeader({
   children,
 }: SevenDaysHeaderProp) {
   return (
-    <div className="my-16">
+    <div className="my-16 px-4">
       <h1 className="text-4xl md:text-6xl text-center">{title}</h1>
       <div className="text-2xl md:text-4xl text-center text-primary">
         {children}
