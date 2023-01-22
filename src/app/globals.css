@@ -16,6 +16,13 @@
     padding: 0.5rem 1.5rem;
     vertical-align: middle;
   }
+  @media (prefers-color-scheme: dark) {
+    .table-pricing tbody td,
+    .table-pricing thead th:not(:first-child),
+    .table-pricing tbody th {
+      background-color: rgb(18, 17, 17, 0.25);
+    }
+  }
   .table-pricing thead th:nth-child(2) {
     border-top-left-radius: 1rem;
   }
@@ -51,6 +58,22 @@
     font-size: 0.875rem;
     text-align: center;
     padding: 0.25rem 1rem;
+  }
+  @responsive {
+    .container-md,
+    .container-lg,
+    .container-xl {
+      @apply mx-auto px-3 md:px-4;
+    }
+    .container-md {
+      @apply max-w-screen-md;
+    }
+    .container-lg {
+      @apply max-w-screen-md;
+    }
+    .container-xl {
+      @apply max-w-screen-xl;
+    }
   }
 }
 

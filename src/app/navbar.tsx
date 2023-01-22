@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import dayAndNightIcon from "./assets/day-and-night-icon.png";
 import Image from "next/image";
+import { useClickAway } from "react-use";
 
 interface NavbarItem {
   href: string;
@@ -32,7 +33,7 @@ function NavbarLink({ href, text }: NavbarItem) {
     <li>
       <Link
         href={href}
-        className="block py-2 pl-3 pr-4 text-stone-700 md:border-0 md:hover:text-primary md:p-0 text-md font-sans"
+        className="block py-2 pl-3 pr-4 text-stone-700 dark:text-stone-300 md:border-0 md:hover:text-primary md:p-0 text-md font-sans"
       >
         {text}
       </Link>
@@ -56,9 +57,16 @@ function NavbarButton({ href, text }: NavbarItem) {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // on clicking outside navbar, close it
+  const refNavbarArea = useRef(null);
+  useClickAway(refNavbarArea, () => setIsOpen(false));
+
   return (
-    <nav className="bg-[rgba(255,255,255,0.75)] backdrop-blur-lg backdrop-brightness-150 border-stone-200 px-2 sm:px-4 py-2.5 sticky top-0 shadow z-10">
-      <div className="flex flex-wrap items-center justify-between mx-auto">
+    <nav className="bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(18,17,17,0.75)] backdrop-blur-lg backdrop-brightness-150 border-stone-200 dark:border-stone-700 px-2 sm:px-4 py-2.5 sticky top-0 shadow z-10">
+      <div
+        className="flex flex-wrap items-center justify-between mx-auto"
+        ref={refNavbarArea}
+      >
         <a href={siteUrl} className="flex items-center">
           <Image
             className="mr-1"

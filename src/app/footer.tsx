@@ -2,7 +2,7 @@ import EmailLink from "./email-link";
 
 export default function Footer() {
   return (
-    <footer className="bg-stone-200 p-6 text-center">
+    <footer className="bg-stone-200 p-6 text-center dark:bg-stone-700">
       <div className="text-md md:text-lg">
         <EmailLink>Contactez-nous</EmailLink>
       </div>

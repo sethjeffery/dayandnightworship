@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Section from "./section";
 
 interface SevenDaysHeaderProp {
   title: string;
@@ -10,11 +11,11 @@ export default function SevenDaysHeader({
   children,
 }: SevenDaysHeaderProp) {
   return (
-    <div className="my-16 px-4">
+    <Section container="xl">
       <h1 className="text-4xl md:text-6xl text-center">{title}</h1>
       <div className="text-2xl md:text-4xl text-center text-primary">
         {children}
       </div>
-    </div>
+    </Section>
   );
 }

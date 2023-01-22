@@ -9,6 +9,35 @@ import tableOrange from "./assets/table-orange.png";
 import lakeOrange from "./assets/lake-orange.png";
 import house from "./assets/house.png";
 import beachHouse from "./assets/beach-house.jpg";
+import Section from "./section";
+
+function HouseDiagram() {
+  return (
+    <div className="flex mx-auto items-center justify-center flex-col md:flex-row px-4">
+      <ul
+        className="flex-1 text-xl text-center md:text-right border-b-4 md:border-r-4 md:border-b-0 border-stone-200 dark:border-stone-600 p-4 leading-8 relative
+        before:absolute before:left-0 before:right-0 before:bottom-0 md:before:left-[inherit] md:before:top-0 before:border-x-4 md:before:border-x-0 md:before:border-y-4 before:border-stone-200 dark:before:border-stone-600 before:h-8 md:before:h-[inherit] md:before:w-8"
+      >
+        <li>Hébergement inclus</li>
+        <li>Repas inclus</li>
+      </ul>
+      <div className="border-l-4 md:border-t-4 md:border-l-0 border-stone-200 dark:border-stone-600 h-8 md:w-4 lg:w-16 md:h-0"></div>
+      <div className="rounded-full bg-stone-200 p-8 dark:bg-stone-600">
+        <Image src={house} alt="House" width="196" height="196" />
+      </div>
+      <div className="border-l-4 md:border-t-4 md:border-l-0 border-stone-200 dark:border-stone-600 h-8 md:w-4 lg:w-16 md:h-0"></div>
+      <ul
+        className="flex-1 text-xl text-center md:text-left border-t-4 md:border-t-0 md:border-l-4 border-stone-200 dark:border-stone-600 p-4 leading-8 relative
+        before:absolute before:left-0 before:right-0 before:bottom-0 md:before:right-[inherit] before:top-0 before:border-x-4 md:before:border-x-0 md:before:border-y-4 before:border-stone-200 dark:before:border-stone-600 before:h-8 md:before:h-[inherit] md:before:w-8"
+      >
+        <li>Temps de louange</li>
+        <li>Amitiés divines</li>
+        <li>Vivre en communauté</li>
+        <li>Honorer le Saint-Esprit</li>
+      </ul>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -23,7 +52,11 @@ export default function Home() {
         en louange, prophétie, intercession, sensibilité
       </SevenDaysHeader>
 
-      <div className="my-16 text-center border-b-2 pb-16 max-w-screen-md mx-auto border-stone-300">
+      <Section
+        container="md"
+        center
+        className="border-b-2 pb-16 border-stone-300 dark:border-stone-600"
+      >
         <p className="text-4xl">21 à 28 d&rsquo;Avril</p>
         <p className="text-xl mt-4">
           Domaine de Laouenekaat
@@ -32,7 +65,7 @@ export default function Home() {
           <br />
           56730 Saint-Gildas-de-Rhuys
         </p>
-      </div>
+      </Section>
 
       <Person
         name="Seth & Ana Jeffery"
@@ -59,45 +92,29 @@ export default function Home() {
         vivre ensemble, grandir ensemble
       </SevenDaysHeader>
 
-      <div className="flex mx-auto items-center justify-center flex-col md:flex-row px-4">
-        <ul
-          className="flex-1 text-xl text-center md:text-right border-b-4 md:border-r-4 md:border-b-0 border-stone-200 p-4 leading-8 relative
-            before:absolute before:left-0 before:right-0 before:bottom-0 md:before:left-[inherit] md:before:top-0 before:border-x-4 md:before:border-x-0 md:before:border-y-4 before:border-stone-200 before:h-8 md:before:h-[inherit] md:before:w-8"
-        >
-          <li>Hébergement inclus</li>
-          <li>Repas inclus</li>
-        </ul>
-        <div className="border-l-4 md:border-t-4 md:border-l-0 border-stone-200 h-8 md:w-4 lg:w-16 md:h-0"></div>
-        <div className="rounded-full bg-stone-200 p-8">
-          <Image src={house} alt="House" width="196" height="196" />
-        </div>
-        <div className="border-l-4 md:border-t-4 md:border-l-0 border-stone-200 h-8 md:w-4 lg:w-16 md:h-0"></div>
-        <ul
-          className="flex-1 text-xl text-center md:text-left border-t-4 md:border-t-0 md:border-l-4 border-stone-200 p-4 leading-8 relative
-            before:absolute before:left-0 before:right-0 before:bottom-0 md:before:right-[inherit] before:top-0 before:border-x-4 md:before:border-x-0 md:before:border-y-4 before:border-stone-200 before:h-8 md:before:h-[inherit] md:before:w-8"
-        >
-          <li>Temps de louange</li>
-          <li>Amitiés divines</li>
-          <li>Vivre en communauté</li>
-          <li>Honorer le Saint-Esprit</li>
-        </ul>
-      </div>
+      <Section>
+        <HouseDiagram />
+      </Section>
 
-      <blockquote className="my-16 max-w-screen-lg text-2xl mx-auto text-center px-4">
+      <Section container="xl" center className="text-2xl px-4" tag="blockquote">
         <div>
           &ldquo;Quand le jour de la Pentecôte arriva, ils étaient tous{" "}
           <strong>ensemble au même endroit</strong>.&rdquo;
         </div>
         <cite className="text-4xl">Acts 2:1</cite>
-      </blockquote>
+      </Section>
 
-      <PictureBlock image={lakeOrange} alt="Peaceful lake" />
+      <PictureBlock
+        image={lakeOrange}
+        alt="Peaceful lake"
+        objectPosition="right"
+      />
 
       <SevenDaysHeader title="7 jours de rafraîchissement">
         pour rafraîchir notre relation avec Dieu
       </SevenDaysHeader>
 
-      <div className="my-16 text-2xl max-w-screen-md px-8 mx-auto">
+      <Section container="md" className="text-2xl">
         <p>
           Le Seigneur est à la fois une langue de feu et une petite voix douce,
           et nous le rencontrons à la fois dans le bruit et dans le silence, en
@@ -111,7 +128,7 @@ export default function Home() {
         <div className="relative my-8">
           <div className="absolute rotate-1 top-0 left-0 w-full h-full shadow-lg bg-stone-100"></div>
           <div className="absolute -rotate-2 top-0 left-0 w-full h-full shadow-lg bg-stone-100"></div>
-          <div className="relative p-4 md:p-8 shadow bg-white">
+          <div className="relative p-4 md:p-8 shadow bg-white text-black">
             <Image src={beachHouse} alt="House near Plage de Kercambre" />
             <p className="text-center mt-2 font-handwriting">
               <a
@@ -134,10 +151,11 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="my-16 text-center">
+      </Section>
+
+      <Section>
         <Cta />
-      </div>
+      </Section>
     </>
   );
 }

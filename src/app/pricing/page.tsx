@@ -3,6 +3,7 @@ import PictureBlock from "../picture-block";
 import Tick from "../assets/icon-tick.svg";
 import Cross from "../assets/icon-cross.svg";
 import Cta from "../cta";
+import Section from "../section";
 
 function PricingMobileItem({
   accommodation,
@@ -45,16 +46,16 @@ export default function Pricing() {
         alt="Domaine de Laouenekaat building"
       />
 
-      <div className="my-16 max-w-screen-md mx-auto px-8 text-xl md:text-3xl">
+      <Section container="md" className="text-xl md:text-3xl">
         <p>
           Le coût total par étudiant est de{" "}
           <strong className="whitespace-nowrap">500 €</strong> pour la semaine.
           Nous avons également un tarif réduit pour les participants qui
           n&rsquo;auront pas besoin d&rsquo;hébergement.
         </p>
-      </div>
+      </Section>
 
-      <div className="my-16 max-w-screen-md mx-auto px-8">
+      <Section container="md">
         <div className="md:hidden">
           <PricingMobileItem price={500} accommodation meals={3} />
           <PricingMobileItem price={350} meals={2} />
@@ -117,19 +118,19 @@ export default function Pricing() {
             <td>0-2 ans</td>
           </tfoot>
         </table>
-      </div>
+      </Section>
 
-      <div className="my-16 max-w-screen-md mx-auto px-8 text-xl md:text-2xl">
+      <Section container="md" className="text-xl md:text-2xl">
         <p>
           Les jeunes enfants sont accueillis à moitié prix, et il y a une salle
           de jeux, mais veuillez noter que nous n&rsquo;avons pas de garderie
           dédiée.
         </p>
-      </div>
+      </Section>
 
-      <div className="my-16">
+      <Section>
         <Cta />
-      </div>
+      </Section>
     </>
   );
 }

@@ -3,6 +3,7 @@ import PictureBlock from "../picture-block";
 import sethAndAnaOutside from "../assets/seth-and-ana-outside.png";
 import instrumentsOrange from "../assets/instruments-orange.png";
 import EmailLink from "../email-link";
+import Section from "../section";
 
 export default function Team() {
   return (
@@ -26,17 +27,17 @@ export default function Team() {
           et intercession.
         </p>
         <p className="mt-8">
-          Seth est connu pour son créativité et sa sensibilité au fleuve de
-          l&rsquo;Esprit pendant le culte. Ana a un fort don prophétique et
-          apporte une passion pour l&rsquo;intercession, les bannières et la
-          danse.
+          Seth est connu pour sa sensibilité au fleuve de l&rsquo;Esprit et sa
+          capacité à le communiquer à travers la musique. Ana a un fort don
+          prophétique et apporte une passion pour l&rsquo;intercession, les
+          bannières et la danse.
         </p>
       </Person>
 
-      <div className="mt-16 py-16 border-t-2 border-stone-300 text-center px-8 text-xl md:text-3xl">
+      <Section center container="lg" className="text-xl md:text-3xl">
         Vous êtes intéressé à rejoindre notre équipe ?{" "}
         <EmailLink>Écrivez-nous!</EmailLink>
-      </div>
+      </Section>
     </>
   );
 }
