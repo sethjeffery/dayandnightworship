@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import dayAndNightIcon from "./assets/day-and-night-icon.png";
+import Image from "next/image";
 
 interface NavbarItem {
   href: string;
@@ -58,6 +60,13 @@ export default function Navbar() {
     <nav className="bg-[rgba(255,255,255,0.75)] backdrop-blur-lg backdrop-brightness-150 border-stone-200 px-2 sm:px-4 py-2.5 sticky top-0 shadow z-10">
       <div className="flex flex-wrap items-center justify-between mx-auto">
         <a href={siteUrl} className="flex items-center">
+          <Image
+            className="mr-1"
+            src={dayAndNightIcon}
+            alt="Day and Night Worship icon"
+            width="24"
+            height="24"
+          />
           <span className="self-center text-xl whitespace-nowrap">
             Day and Night Worship
           </span>

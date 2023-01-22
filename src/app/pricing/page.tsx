@@ -15,7 +15,7 @@ function PricingMobileItem({
 }) {
   return (
     <div className="flex gap-4 text-xl justify-center py-8 px-4 bg-stone-200 my-8 rounded-lg">
-      <h3 className="font-bold text-right text-3xl">€ {price}</h3>
+      <h3 className="font-bold text-right text-3xl">{price} €</h3>
       <div className="grid gap-1 grid-cols-[fit-content(2rem)_fit-content(12rem)] items-center justify-center grid-flow-row-dense justify-self-start">
         <div>
           <Tick width="24" height="24" className="mx-auto" />
@@ -48,7 +48,7 @@ export default function Pricing() {
       <div className="my-16 max-w-screen-md mx-auto px-8 text-xl md:text-3xl">
         <p>
           Le coût total par étudiant est de{" "}
-          <strong className="whitespace-nowrap">€ 500</strong> pour la semaine.
+          <strong className="whitespace-nowrap">500 €</strong> pour la semaine.
           Nous avons également un tarif réduit pour les participants qui
           n&rsquo;auront pas besoin d&rsquo;hébergement.
         </p>
@@ -64,10 +64,10 @@ export default function Pricing() {
           <thead>
             <tr>
               <th></th>
-              <th>€ 500</th>
-              <th>€ 350</th>
-              <th>€ 250</th>
-              <th>€ 0</th>
+              <th>500 €</th>
+              <th>350 €</th>
+              <th>250 €</th>
+              <th>0 €</th>
             </tr>
           </thead>
           <tbody>
