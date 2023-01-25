@@ -20,7 +20,7 @@
     .table-pricing tbody td,
     .table-pricing thead th:not(:first-child),
     .table-pricing tbody th {
-      background-color: rgb(18, 17, 17, 0.25);
+      background-color: rgba(18, 17, 17, 0.25);
     }
   }
   .table-pricing thead th:nth-child(2) {
@@ -69,7 +69,7 @@
       @apply max-w-screen-md;
     }
     .container-lg {
-      @apply max-w-screen-md;
+      @apply max-w-screen-lg;
     }
     .container-xl {
       @apply max-w-screen-xl;

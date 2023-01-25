@@ -15,7 +15,7 @@ function PricingMobileItem({
   price: number;
 }) {
   return (
-    <div className="flex gap-4 text-xl justify-center py-8 px-4 bg-stone-200 my-8 rounded-lg">
+    <div className="flex gap-4 text-xl justify-center py-8 px-4 bg-stone-200 dark:bg-[rgba(18,17,17,0.25)] my-8 rounded-lg">
       <h3 className="font-bold text-right text-3xl">{price} €</h3>
       <div className="grid gap-1 grid-cols-[fit-content(2rem)_fit-content(12rem)] items-center justify-center grid-flow-row-dense justify-self-start">
         <div>
@@ -42,7 +42,7 @@ export default function Pricing() {
     <>
       <PictureBlock
         image={buildingOrange}
-        title="Prix"
+        title="Tarification"
         alt="Domaine de Laouenekaat building"
       />
 
@@ -125,6 +125,16 @@ export default function Pricing() {
           Les jeunes enfants sont accueillis à moitié prix, et il y a une salle
           de jeux, mais veuillez noter que nous n&rsquo;avons pas de garderie
           dédiée.
+        </p>
+
+        <h2 className="text-2xl md:text-3xl mt-8 mb-2 text-primary">
+          Comment payer les frais d&lsquo;inscription ?
+        </h2>
+        <p>
+          A votre arrivée, vous pouvez payer en espèces ou par chèque à
+          l&rsquo;ordre de Day and Night Worship. Vous pouvez également
+          effectuer un virement bancaire, dont nous vous communiquerons
+          prochainement les détails.
         </p>
       </Section>
 

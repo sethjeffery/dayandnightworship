@@ -12,7 +12,24 @@ module.exports = {
         serif: "var(--font-caladea)",
         handwriting: "var(--font-caveat)",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            fontSize: "1.125rem",
+            color: "inherit",
+            "--tw-prose-headings": "inherit",
+            h3: {
+              fontWeight: "normal",
+              marginBottom: "0",
+              color: "#EB7A00",
+            },
+            li: {
+              margin: "0",
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

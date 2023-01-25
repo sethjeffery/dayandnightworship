@@ -17,12 +17,16 @@ const navbarItems: NavbarItem[] = [
     text: "Accueil",
   },
   {
+    href: "/info",
+    text: "Info",
+  },
+  {
     href: "/team",
     text: "Équipe",
   },
   {
     href: "/pricing",
-    text: "Prix",
+    text: "Tarification",
   },
 ];
 
@@ -88,7 +92,7 @@ export default function Navbar() {
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-stone-500 rounded-lg md:hidden hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-200"
+          className="inline-flex items-center p-2 ml-3 text-sm text-stone-500 rounded-lg md:hidden hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-200 focus:ring-stone-700"
           aria-controls="navbar-default"
           aria-expanded="false"
           onClick={() => setIsOpen(!isOpen)}
@@ -102,9 +106,9 @@ export default function Navbar() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </button>
@@ -112,7 +116,7 @@ export default function Navbar() {
           className={`${isOpen ? "" : "hidden"} w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 border border-stone-100 rounded-lg bg-white md:bg-transparent md:flex-row md:items-center md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 border border-stone-100 dark:border-stone-700 rounded-lg bg-white dark:bg-[rgba(0,0,0,0.25)] md:bg-transparent md:flex-row md:items-center md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
             {navbarItems.map((navbarItem) => (
               <NavbarLink key={navbarItem.text} {...navbarItem} />
             ))}

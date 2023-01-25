@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/sethjeffery/dayandnightworship#readme",
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/react-world-flags": "^1.4.2",
     "autoprefixer": "^10.4.13",
     "jest": "^29.3.1",
