@@ -25,8 +25,8 @@ export default function Team() {
           Seth et Ana, originaires d&rsquo;Angleterre et de Colombie, sont
           missionnaires en France depuis 2020. Ils ont fait partie de
           l&rsquo;équipe de France Élève-Toi à Paris en 2021, et ont un grand
-          cœur pour les maisons de prière et les rassemblements de culte 24h/24
-          et intercession.
+          cœur pour les maisons de prière et les rassemblements de louange et
+          intercession 24h/24.
         </p>
         <p className="mt-8">
           Seth est connu pour sa sensibilité au fleuve de l&rsquo;Esprit et sa
@@ -62,8 +62,8 @@ export default function Team() {
         alt="Michael Obed profile"
       >
         <p>
-          Michael Obed est un adorateur doué et passionné de Londres. Il aime
-          voir les gens rencontrer Dieu dans l&rsquo;adoration et les voir
+          Michael est un adorateur doué et passionné de Londres. Il aime voir
+          les gens rencontrer Dieu dans l&rsquo;adoration et les voir
           transformés par la puissance du Saint-Esprit.
         </p>
         <p className="mt-8">
