@@ -5,6 +5,7 @@ import Link from "next/link";
 import dayAndNightIcon from "./assets/day-and-night-icon.png";
 import Image from "next/image";
 import { useClickAway } from "react-use";
+import LogoText from "./assets/day-and-night-logo.svg";
 
 interface NavbarItem {
   href: string;
@@ -50,7 +51,7 @@ function NavbarButton({ href, text }: NavbarItem) {
     <li>
       <a
         href={href}
-        className="block rounded bg-primary text-md text-white px-4 py-2 hover:brightness-110 animate-button-ping-primary font-sans"
+        className="block whitespace-nowrap rounded bg-primary text-md text-white px-4 py-2 hover:brightness-110 animate-button-ping-primary font-sans"
       >
         {text}
       </a>
@@ -68,31 +69,30 @@ export default function Navbar() {
   return (
     <nav className="bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(18,17,17,0.75)] backdrop-blur-lg backdrop-brightness-150 border-stone-200 dark:border-stone-700 px-2 sm:px-4 py-2.5 sticky top-0 shadow z-10">
       <div
-        className="flex flex-wrap items-center justify-between mx-auto"
+        className="grid grid-cols-[1fr_40px] md:flex items-center justify-between mx-auto"
         ref={refNavbarArea}
       >
-        <a href={siteUrl} className="flex items-center">
+        <a href={siteUrl} className="flex items-center gap-2 mr-8">
           <Image
-            className="mr-1"
             src={dayAndNightIcon}
             alt="Day and Night Worship icon"
-            width="24"
-            height="24"
+            width="32"
+            height="32"
           />
           <span className="self-center text-xl whitespace-nowrap">
-            Day and Night Worship
+            <LogoText
+              aria-label="Day and Night Worship"
+              className="max-w-full"
+            />
           </span>
-          <span className="hidden lg:inline opacity-50">
-            <span className="mx-2">|</span>
-            <span className="self-center text-xl whitespace-nowrap">
-              École de Louange
-            </span>
+          <span className="hidden lg:inline opacity-50 pt-[2px] text-xl whitespace-nowrap">
+            École de Louange
           </span>
         </a>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-stone-500 rounded-lg md:hidden hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-200 focus:ring-stone-700"
+          className="inline-flex items-center p-2 text-sm text-stone-500 rounded-lg md:hidden hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-200 dark:hover:bg-stone-800 dark:focus:ring-stone-700"
           aria-controls="navbar-default"
           aria-expanded="false"
           onClick={() => setIsOpen(!isOpen)}
@@ -113,7 +113,9 @@ export default function Navbar() {
           </svg>
         </button>
         <div
-          className={`${isOpen ? "" : "hidden"} w-full md:block md:w-auto`}
+          className={`${
+            isOpen ? "" : "hidden"
+          } w-full md:block md:w-auto col-span-2`}
           id="navbar-default"
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 border border-stone-100 dark:border-stone-700 rounded-lg bg-white dark:bg-[rgba(0,0,0,0.25)] md:bg-transparent md:flex-row md:items-center md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
