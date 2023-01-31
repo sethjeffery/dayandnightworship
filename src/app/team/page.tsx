@@ -1,6 +1,7 @@
 import Person from "../person";
 import PictureBlock from "../picture-block";
 import sethAndAnaOutside from "../assets/seth-and-ana-outside.png";
+import trevAndBell from "../assets/trev-and-bell.jpg";
 import instrumentsOrange from "../assets/instruments-orange.png";
 import EmailLink from "../email-link";
 import Section from "../section";
@@ -33,6 +34,30 @@ export default function Team() {
           capacité à le communiquer à travers la musique. Ana a un fort don
           prophétique et apporte une passion pour l&rsquo;intercession, les
           bannières et la danse.
+        </p>
+      </Person>
+
+      <Person
+        name="Trev & Bell Phillips"
+        image={trevAndBell}
+        alt="Trevor and Danielle Phillips"
+      >
+        <p>
+          Trevor et Danielle (Trev &amp; Bell) veulent juste que la vraie chose
+          &mdash; à la fois en privé et dans les rassemblements d&rsquo;église:
+          être enlevée dans une sainte crainte et révérence alors que nous nous
+          rassemblons dans l&rsquo;émerveillement devant Jésus. Être conscient
+          de Sa présence et apprendre à honorer Son cœur comme une Sainte Épouse
+          amoureuse, afin qu&rsquo;Il puisse recevoir Sa digne récompense.
+        </p>
+        <p className="mt-8">
+          Que le reste, l&rsquo;Ecclesia, Son Epouse, soit discipliné dans sa
+          sensibilité envers le Saint-Esprit, et dans sa valorisation.
+          Qu&rsquo;en donnant à l&rsquo;Esprit de Dieu l&rsquo;espace pour nous
+          conduire comme Il veut, Il nous apprendrait à adorer en esprit et en
+          vérité et nous apprendrions à aller plus loin avec Lui &mdash; bien
+          au-delà de nos confortables frontières «&nbsp;ecclésiastiques&nbsp;»
+          &mdash; dans un lieu de le connaître plus intimement.
         </p>
       </Person>
 
