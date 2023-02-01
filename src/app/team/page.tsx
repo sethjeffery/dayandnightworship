@@ -7,6 +7,7 @@ import EmailLink from "../email-link";
 import Section from "../section";
 import graceTiengwelieu from "../assets/grace-tiengwelieu.jpg";
 import michaelObed from "../assets/michael-obed.jpg";
+import jasonLeeJones from "../assets/jason-lee-jones.jpg";
 
 export default function Team() {
   return (
@@ -96,6 +97,24 @@ export default function Team() {
           ses compétences professionnelles en tant que musicien et
           auteur-compositeur. Il apporte également son expérience dans le
           soutien de nombreuses équipes de louanges britanniques.
+        </p>
+      </Person>
+
+      <Person
+        name="Jason Lee Jones"
+        image={jasonLeeJones}
+        alt="Jason Lee Jones profile"
+        live
+      >
+        <p>
+          Jason Lee Jones is an internationally recognised speaker, preacher,
+          teacher, author, poet, songwriter and accomplished musician and
+          missionary.
+        </p>
+        <p className="mt-8">
+          Jason and his wife Regina are completely ruined for Jesus. The more
+          they encounter the kindness of Jesus, the more they long to be his
+          voice of passion and compassion in the earth.
         </p>
       </Person>
 

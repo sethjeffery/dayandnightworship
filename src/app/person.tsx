@@ -8,6 +8,7 @@ interface PersonProps {
   image: StaticImageData;
   alt: string;
   quote?: boolean;
+  live?: boolean;
 }
 
 export default function Person({
@@ -16,6 +17,7 @@ export default function Person({
   image,
   alt,
   quote,
+  live,
 }: PersonProps) {
   const paddingClassName = quote ? "px-8 md:px-12" : "px-6 md:px-8";
 
@@ -32,7 +34,14 @@ export default function Person({
         <div
           className={`text-xl md:text-2xl md:pl-12 max-w-md md:max-w-none ${paddingClassName}`}
         >
-          <h2 className="font-bold text-center mb-2 md:text-left">{name}</h2>
+          <h2 className="font-bold text-center mb-2 md:text-left">
+            {name}
+            {live && (
+              <span className="bg-red-600 text-white inline-block ml-2 px-1 font-sans text-sm font-normal">
+                LIVE
+              </span>
+            )}
+          </h2>
           {quote && (
             <div className="text-6xl md:text-8xl absolute -mt-1 md:-mt-2 -ml-7 opacity-25 md:-ml-12">
               &ldquo;
