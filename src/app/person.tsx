@@ -38,7 +38,7 @@ export default function Person({
             {name}
             {live && (
               <span className="bg-red-600 text-white inline-block ml-2 px-1 font-sans text-sm font-normal">
-                LIVE
+                ZOOM
               </span>
             )}
           </h2>
