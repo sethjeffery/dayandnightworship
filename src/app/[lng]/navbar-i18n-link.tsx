@@ -10,7 +10,7 @@ export default function NavbarI18nLink({
   text: string;
 }) {
   const pathname = usePathname() || "";
-  const basePath = pathname.replace(/\/[a-z]{2}\//, "/");
+  const basePath = pathname.replace(/\/[a-z]{2}(\/|$)/, "$1");
   const path = `/${lang}${basePath}`;
 
   return (
