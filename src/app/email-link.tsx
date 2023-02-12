@@ -1,5 +1,6 @@
 "use client";
 
+import reverse from "lodash/reverse";
 import { ReactNode, useEffect, useState } from "react";
 
 export default function EmailLink({ children }: { children: ReactNode }) {
@@ -10,7 +11,7 @@ export default function EmailLink({ children }: { children: ReactNode }) {
   }, []);
 
   const handleButton = () => {
-    window.location.href = "mailto:salut@dayandnightworship.fr";
+    window.location.href = `mailto:${reverse("tulas")}@dayandnightworship.fr`;
   };
 
   if (!showingEmail) return null;

@@ -1,6 +1,8 @@
-import EmailLink from "../email-link";
+import dynamic from "next/dynamic";
 import i18n from "./footer.yml";
 import Translate from "./translate";
+
+const EmailLink = dynamic(() => import("../email-link"), { ssr: false });
 
 export default function Footer({ lng }: { lng: string }) {
   return (

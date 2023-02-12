@@ -3,7 +3,6 @@ import PictureBlock from "../../picture-block";
 import sethAndAnaOutside from "../../assets/seth-and-ana-outside.png";
 import trevAndBell from "../../assets/trev-and-bell.jpg";
 import instrumentsOrange from "../../assets/instruments-orange.png";
-import EmailLink from "../../email-link";
 import Section from "../../section";
 import graceTiengwelieu from "../../assets/grace-tiengwelieu.jpg";
 import michaelObed from "../../assets/michael-obed.jpg";
@@ -12,6 +11,9 @@ import fernando from "../../assets/fernandinho.jpg";
 import i18n from "./team.yml";
 import { StaticImageData } from "next/image";
 import Translate, { t } from "../translate";
+import dynamic from "next/dynamic";
+
+const EmailLink = dynamic(() => import("../../email-link"), { ssr: false });
 
 interface TeamPersonProps {
   lng: string;
