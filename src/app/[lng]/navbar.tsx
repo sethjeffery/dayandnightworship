@@ -30,7 +30,7 @@ function NavbarLink({ href, text, lng }: I18nNavbarItem) {
       <I18nLink
         lng={lng}
         href={href}
-        className="block py-2 pl-3 pr-4 text-stone-700 dark:text-stone-300 md:border-0 md:hover:text-primary md:p-0 text-md font-sans"
+        className="block py-2 pl-3 pr-4 text-stone-800 dark:text-stone-300 md:border-0 md:hover:text-primary md:p-0 text-md font-sans"
       >
         {text}
       </I18nLink>
@@ -102,9 +102,6 @@ export default function Navbar({ lng }: { lng: string }) {
               aria-label="Day and Night Worship"
               className="max-w-full"
             />
-          </span>
-          <span className="hidden lg:inline opacity-50 pt-[2px] text-xl whitespace-nowrap">
-            <Translate code="school_of_worship" lng={lng} i18n={i18n} />
           </span>
         </Link>
         <button

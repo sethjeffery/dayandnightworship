@@ -18,7 +18,11 @@ export default function NavbarI18n({ lng }: { lng: string }) {
 
   return (
     <li className="relative" ref={refI18nArea}>
-      <button onClick={handleToggle} className="block p-3 md:p-0">
+      <button
+        onClick={handleToggle}
+        className="block p-3 md:p-0 hover:text-primary"
+        aria-label="Language"
+      >
         <span className="flex items-center gap-1 cursor-pointer">
           <Flag height="24" width="24" />
           <DropdownArrow className="w-4 h-4" />
