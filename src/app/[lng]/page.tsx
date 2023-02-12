@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import beachHouse from "../assets/beach-house.jpg";
@@ -11,7 +12,8 @@ import Section from "../section";
 import SevenDaysHeader from "../seven-days-header";
 import i18n from "./page.yml";
 import Translate from "./translate";
-import Video from "./video";
+
+const Video = dynamic(() => import("./video"), { ssr: false });
 
 function HouseDiagram({ lng }: { lng: string }) {
   return (
@@ -65,11 +67,8 @@ export default function Home({ params: { lng } }: { params: { lng: string } }) {
 
       <SevenDaysHeader lng={lng} i18n={i18n} code="deep_training_section" />
 
-      <Section
-        container="md"
-        center
-        className="border-b-2 pb-16 border-stone-300 dark:border-stone-600"
-      >
+      <Section container="md" center>
+        <Video />
         <p className="text-4xl">
           <Translate i18n={i18n} code="date" lng={lng} />
         </p>
@@ -81,8 +80,6 @@ export default function Home({ params: { lng } }: { params: { lng: string } }) {
           56730 Saint-Gildas-de-Rhuys
         </p>
       </Section>
-
-      <Video />
 
       <PictureBlock image={tableOrange} alt="Friends at table" />
 
