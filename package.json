@@ -26,12 +26,15 @@
   "homepage": "https://github.com/sethjeffery/dayandnightworship#readme",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
+    "@types/js-yaml": "^4.0.5",
+    "@types/lodash": "^4.14.191",
     "@types/react-world-flags": "^1.4.2",
     "autoprefixer": "^10.4.13",
     "jest": "^29.3.1",
     "postcss": "^8.4.14",
     "prettier": "2.8.3",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "yaml-loader": "^0.8.0"
   },
   "dependencies": {
     "@next/font": "13.1.2",
@@ -39,13 +42,17 @@
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
+    "accept-language": "^3.0.18",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
-    "next": "13.1.2",
+    "lodash": "^4.17.21",
+    "next": "^13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-player": "^2.11.2",
     "react-use": "^17.4.0",
     "react-world-flags": "^1.5.1",
+    "snarkdown": "^2.0.0",
     "tailwind-merge": "^1.8.1",
     "typescript": "4.9.4"
   }

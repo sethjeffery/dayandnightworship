@@ -1,9 +1,11 @@
-import buildingOrange from "../assets/building-orange.png";
-import PictureBlock from "../picture-block";
-import Tick from "../assets/icon-tick.svg";
-import Cross from "../assets/icon-cross.svg";
-import Cta from "../cta";
-import Section from "../section";
+import buildingOrange from "../../assets/building-orange.png";
+import PictureBlock from "../../picture-block";
+import Tick from "../../assets/icon-tick.svg";
+import Cross from "../../assets/icon-cross.svg";
+import Cta from "../../cta";
+import Section from "../../section";
+import Translate, { t } from "../translate";
+import i18n from "./pricing.yml";
 
 function PricingMobileItem({
   accommodation,
@@ -37,21 +39,22 @@ function PricingMobileItem({
   );
 }
 
-export default function Pricing() {
+export default function Pricing({
+  params: { lng },
+}: {
+  params: { lng: string };
+}) {
   return (
     <>
       <PictureBlock
         image={buildingOrange}
-        title="Tarification"
+        title={t({ lng, i18n, code: "pricing" })}
         alt="Domaine de Laouenekaat building"
       />
 
       <Section container="md" className="text-xl md:text-3xl">
         <p>
-          Le coût total par étudiant est de{" "}
-          <strong className="whitespace-nowrap">500 €</strong> pour la semaine.
-          Nous avons également un tarif réduit pour les participants qui
-          n&rsquo;auront pas besoin d&rsquo;hébergement.
+          <Translate i18n={i18n} code="total_cost_is" lng={lng} formatted />
         </p>
       </Section>
 
@@ -73,7 +76,9 @@ export default function Pricing() {
           </thead>
           <tbody>
             <tr>
-              <th>Formation</th>
+              <th>
+                <Translate code="training" lng={lng} i18n={i18n} />
+              </th>
               <td>
                 <Tick width="32" height="32" />
               </td>
@@ -88,14 +93,18 @@ export default function Pricing() {
               </td>
             </tr>
             <tr>
-              <th>Repas</th>
+              <th>
+                <Translate code="meals" lng={lng} i18n={i18n} />
+              </th>
               <td>3</td>
               <td>2</td>
               <td>3</td>
               <td>3</td>
             </tr>
             <tr>
-              <th>Hébergement</th>
+              <th>
+                <Translate code="training" lng={lng} i18n={i18n} />
+              </th>
               <td>
                 <Tick width="32" height="32" />
               </td>
@@ -114,33 +123,36 @@ export default function Pricing() {
             <td></td>
             <td></td>
             <td></td>
-            <td>3-12 ans</td>
-            <td>0-2 ans</td>
+            <td>
+              <Translate code="3_12_years" lng={lng} i18n={i18n} />
+            </td>
+            <td>
+              <Translate code="0_2_years" lng={lng} i18n={i18n} />
+            </td>
           </tfoot>
         </table>
       </Section>
 
       <Section container="md" className="text-xl md:text-2xl">
         <p>
-          Les jeunes enfants sont accueillis à moitié prix, et il y a une salle
-          de jeux, mais veuillez noter que nous n&rsquo;avons pas de garderie
-          dédiée.
+          <Translate code="children_info" lng={lng} i18n={i18n} />
         </p>
 
         <h2 className="text-2xl md:text-3xl mt-8 mb-2 text-primary">
-          Comment payer les frais d&lsquo;inscription ?
+          <Translate code="how_to_pay.title" lng={lng} i18n={i18n} />
         </h2>
         <p>
-          A votre arrivée, vous pouvez payer en espèces ou par chèque à
-          l&rsquo;ordre de Day and Night Worship. Vous pouvez également
-          effectuer un virement bancaire, dont nous vous communiquerons
-          prochainement les détails.
+          <Translate code="how_to_pay.content" lng={lng} i18n={i18n} />
         </p>
       </Section>
 
       <Section>
-        <Cta />
+        <Cta lng={lng} />
       </Section>
     </>
   );
 }
+
+export const config = {
+  runtime: "experimental-edge",
+};

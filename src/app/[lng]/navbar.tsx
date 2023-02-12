@@ -1,47 +1,39 @@
 "use client";
 
-import { useRef, useState } from "react";
-import Link from "next/link";
-import dayAndNightIcon from "./assets/day-and-night-icon.png";
+import dayAndNightIcon from "@/app/assets/day-and-night-icon.png";
+import LogoText from "@/app/assets/day-and-night-logo.svg";
+import DropdownArrow from "@/app/assets/dropdown-arrow.svg";
 import Image from "next/image";
+import { useMemo, useRef, useState } from "react";
 import { useClickAway } from "react-use";
-import LogoText from "./assets/day-and-night-logo.svg";
+import Flag from "react-world-flags";
+import { twMerge } from "tailwind-merge";
+import Translate, { t } from "./translate";
+import I18nLink from "./i18n-link";
+import NavbarI18nLink from "./navbar-i18n-link";
+import i18n from "./navbar.yml";
 
 interface NavbarItem {
   href: string;
   text: string;
 }
 
-const navbarItems: NavbarItem[] = [
-  {
-    href: "/",
-    text: "Accueil",
-  },
-  {
-    href: "/info",
-    text: "Info",
-  },
-  {
-    href: "/team",
-    text: "Équipe",
-  },
-  {
-    href: "/pricing",
-    text: "Tarification",
-  },
-];
+type I18nNavbarItem = NavbarItem & {
+  lng: string;
+};
 
 const siteUrl = "https://www.dayandnightworship.fr/";
 
-function NavbarLink({ href, text }: NavbarItem) {
+function NavbarLink({ href, text, lng }: I18nNavbarItem) {
   return (
     <li>
-      <Link
+      <I18nLink
+        lng={lng}
         href={href}
         className="block py-2 pl-3 pr-4 text-stone-700 dark:text-stone-300 md:border-0 md:hover:text-primary md:p-0 text-md font-sans"
       >
         {text}
-      </Link>
+      </I18nLink>
     </li>
   );
 }
@@ -51,7 +43,7 @@ function NavbarButton({ href, text }: NavbarItem) {
     <li>
       <a
         href={href}
-        className="block whitespace-nowrap rounded bg-primary text-md text-white px-4 py-2 hover:brightness-110 animate-button-ping-primary font-sans"
+        className="mt-2 md:mt-0 block whitespace-nowrap rounded bg-primary text-md text-white px-4 py-2 hover:brightness-110 animate-button-ping-primary font-sans"
       >
         {text}
       </a>
@@ -59,12 +51,65 @@ function NavbarButton({ href, text }: NavbarItem) {
   );
 }
 
-export default function Navbar() {
+function NavbarI18n({ lng }: { lng: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const flagCode = lng === "en" ? "gb" : lng;
+  const refI18nArea = useRef(null);
+  useClickAway(refI18nArea, () => setIsOpen(false));
+
+  return (
+    <li className="relative" ref={refI18nArea}>
+      <button onClick={() => setIsOpen(!isOpen)} className="block p-3 md:p-0">
+        <span className="flex items-center gap-1 cursor-pointer">
+          <Flag code={flagCode} height="24" width="24" />
+          <DropdownArrow className="w-4 h-4" />
+        </span>
+      </button>
+      <div
+        className={twMerge(
+          "md:transition-all md:absolute top-full md:mt-6 right-0 text-left font-sans bg-white dark:bg-[rgba(0,0,0,0.8)] rounded-lg md:shadow-lg origin-top",
+          isOpen
+            ? "opacity-100 scale-100"
+            : "hidden md:block opacity-0 invisible scale-75"
+        )}
+      >
+        <ul className="md:py-2">
+          <NavbarI18nLink flag="fr" lang="fr" text="Français" />
+          <NavbarI18nLink flag="gb" lang="en" text="English" />
+        </ul>
+      </div>
+    </li>
+  );
+}
+
+export default function Navbar({ lng }: { lng: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   // on clicking outside navbar, close it
   const refNavbarArea = useRef(null);
   useClickAway(refNavbarArea, () => setIsOpen(false));
+
+  const navbarItems = useMemo<NavbarItem[]>(
+    () => [
+      {
+        href: "/",
+        text: t({ lng, i18n, code: "home" }),
+      },
+      {
+        href: "/info",
+        text: t({ lng, i18n, code: "info" }),
+      },
+      {
+        href: "/team",
+        text: t({ lng, i18n, code: "team" }),
+      },
+      {
+        href: "/pricing",
+        text: t({ lng, i18n, code: "pricing" }),
+      },
+    ],
+    [lng]
+  );
 
   return (
     <nav className="bg-[rgba(255,255,255,0.75)] dark:bg-[rgba(18,17,17,0.75)] backdrop-blur-lg backdrop-brightness-150 border-stone-200 dark:border-stone-700 px-2 sm:px-4 py-2.5 sticky top-0 shadow z-10">
@@ -86,7 +131,7 @@ export default function Navbar() {
             />
           </span>
           <span className="hidden lg:inline opacity-50 pt-[2px] text-xl whitespace-nowrap">
-            École de Louange
+            <Translate code="school_of_worship" lng={lng} i18n={i18n} />
           </span>
         </a>
         <button
@@ -120,11 +165,12 @@ export default function Navbar() {
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 border border-stone-100 dark:border-stone-700 rounded-lg bg-white dark:bg-[rgba(0,0,0,0.25)] md:bg-transparent md:flex-row md:items-center md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
             {navbarItems.map((navbarItem) => (
-              <NavbarLink key={navbarItem.text} {...navbarItem} />
+              <NavbarLink key={navbarItem.text} {...navbarItem} lng={lng} />
             ))}
+            <NavbarI18n lng={lng} />
             <NavbarButton
               href="https://sg5uurechhp.typeform.com/to/V2wr070P"
-              text="S’inscrire !"
+              text={t({ lng, i18n, code: "register" })}
             />
           </ul>
         </div>

@@ -1,0 +1,56 @@
+fr:
+  deep_training_section:
+    title: 7 jours de formation approfondie
+    subtitle: en louange, prophétie, intercession, sensibilité
+  community_section:
+    title: 7 jours de communauté
+    subtitle: vivre ensemble, grandir ensemble
+    pentecost_quote_1: Quand le jour de la Pentecôte arriva, ils étaient tous
+    pentecost_quote_2: ensemble au même endroit
+  refreshment_section:
+    title: 7 jours de rafraîchissement
+    subtitle: pour rafraîchir notre relation avec Dieu
+    is_a_short_distance_from: n’est qu’à 10 min à pied de
+    content: |
+      Le Seigneur est à la fois une langue de feu et une petite voix douce,
+      et nous le rencontrons à la fois dans le bruit et dans le silence, en
+      temps de forte communauté et en temps de solitude.
+
+      Pour cela, nous avons choisi un endroit où nous pouvons non seulement
+      louer ensemble, mais aussi passer des moments calmes en développant
+      notre connexion personnelle avec le Saint-Esprit.
+  diagram:
+    accommodation: Hébergement inclus
+    meals: Repas inclus
+    worship: Temps de louange
+    friendships: Amitiés divines
+    community: Vivre en communauté
+    holy_spirit: Honorer le Saint-Esprit
+en:
+  deep_training_section:
+    title: 7 jours of deep training
+    subtitle: in worship, prophecy, intercession, sensitivity
+  community_section:
+    title: 7 days of community
+    subtitle: living together, growing together
+    pentecost_quote_1: When the day of Pentecost arrived, they were all
+    pentecost_quote_2: together in one place
+  refreshment_section:
+    title: 7 days of refreshement
+    subtitle: to bring fresh fire to our walk with God
+    content: |
+      The Lord is both a tongue of fire and a still small voice, and we meet
+      him in both the great noise and in the silence, in times of deep
+      community and deep solitude.
+
+      For this reason, we have chosen a location where we can not only worship
+      together in community, but also seek him in calm places where we can
+      develop our personal connection with the Holy Spirit.
+    is_a_short_distance_from: is just 10 minutes walk from
+  diagram:
+    accommodation: Accommodation included
+    meals: Meals included
+    worship: Times of worship
+    friendships: Godly friendships
+    community: Living in community
+    holy_spirit: Honouring the Holy Spirit

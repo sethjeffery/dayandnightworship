@@ -1,5 +1,5 @@
 import { Caladea, Caveat } from "@next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
@@ -17,14 +17,22 @@ const caveat = Caveat({
   display: "optional",
 });
 
+const languages = ["en", "fr"];
+
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
+
 export default function RootLayout({
   children,
+  params: { lng },
 }: {
   children: React.ReactNode;
+  params: { lng: "en" | "fr" };
 }) {
   return (
     <html
-      lang="en"
+      lang={lng}
       className={`${caladea.variable} ${caveat.variable} font-serif`}
     >
       {/*
@@ -33,9 +41,9 @@ export default function RootLayout({
       */}
       <head />
       <body className="bg-background dark:bg-stone-800 dark:text-stone-200">
-        <Navbar />
+        <Navbar lng={lng} />
         {children}
-        <Footer />
+        <Footer lng={lng} />
       </body>
     </html>
   );

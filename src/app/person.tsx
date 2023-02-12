@@ -4,20 +4,20 @@ import Section from "./section";
 
 interface PersonProps {
   name: string;
-  children: ReactNode;
   image: StaticImageData;
   alt: string;
   quote?: boolean;
   live?: boolean;
+  children: ReactNode;
 }
 
 export default function Person({
-  children,
   name,
   image,
   alt,
   quote,
   live,
+  children,
 }: PersonProps) {
   const paddingClassName = quote ? "px-8 md:px-12" : "px-6 md:px-8";
 
@@ -47,7 +47,7 @@ export default function Person({
               &ldquo;
             </div>
           )}
-          {children}
+          <div className="space-y-8">{children}</div>
         </div>
       </div>
     </Section>

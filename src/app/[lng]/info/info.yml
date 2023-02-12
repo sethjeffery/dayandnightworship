@@ -1,0 +1,130 @@
+fr:
+  info: Information
+  when:
+    question: C’est quand l’école ?
+    answer: L’école ouvre le **21 Avril à 19h00** et se termine le **28 Avril à 9h00**.
+  where:
+    question: Où cela se passe-t-il?
+  how_much:
+    question: Combien est-ce et comment dois-je payer ?
+    answer: Veuillez consulter la page
+    answer_pricing: tarifs
+    answer_end: pour plus d’informations sur les prix.
+  what_teaching:
+    question: Quel sera l’enseignement ?
+    answer: "L’enseignement se concentrera sur six catégories tout au long de la semaine, avec des ateliers et des séances spécifiques :"
+  intimacy:
+    title: Intimacy
+    points:
+      - Adorer en esprit et en vérité
+      - Vivre sous la conduite du Saint-Esprit
+      - « Soaking » et silence
+  teams:
+    title: Équipes
+    points:
+      - Construire une équipe forte
+      - Louange à travers la communauté
+      - Leadership et l’autorité
+  ministry:
+    title: Ministère
+    points:
+      - Intercession et combat spirituel
+      - Discernement et changement d’atmosphères
+      - La prophétie
+  creativity:
+    title: Créativité
+    points:
+      - Écriture de chansons
+      - Improvisation
+      - Danse, bannières et mouvement
+  breakthrough:
+    title: Percée
+    points:
+      - Barrières personnelles et collectives
+      - Briser les barrières et atteindre de nouveaux niveaux
+      - Les clés de l'autorité spirituel
+  events:
+    title: Événements
+    points:
+      - Organiser de événements de louange
+      - Maisons de prière
+      - Travailler à travers les dénominations
+  what_to_bring:
+    question: Que dois-je apporter avec moi ?
+    answer: |
+      Si vous êtes un musicien avec un instrument portable, nous vous encourageons à l’apporter - bien
+      que nous fournissions également un piano, une guitare et une batterie. Il est également
+      conseillé d’apporter un ordinateur portable ou une tablette.
+
+      La literie et les draps seront fournis, ainsi que les machines à laver.
+  own_room:
+    question: Aurai-je ma propre chambre ?
+    answer: |
+      Nous aurons accès à de nombreuses chambres avec lits simples et doubles, de quoi
+      respecter les besoins de couchage de chacun. Mais si vous avez des exigences
+      particulières, nous vous recommandons de nous contacter.
+
+en:
+  info: Information
+  when:
+    question: When is the school?
+    answer: The school starts on **21st April at 7pm** and finishes on **28th April at 9am**.
+  where:
+    question: Where will it take place?
+  how_much:
+    question: How much is it and how do I pay?
+    answer: Please see the page for
+    answer_pricing: pricing
+    answer_end: for more information about the costs.
+  what_teaching:
+    question: What will be the teaching?
+    answer: "The teaching will mostly focus on six categories throughout the week, with practical workshops and specific teachings :"
+  intimacy:
+    title: Intimacy
+    points:
+      - Worshiping in spirit and in truth
+      - Living led by the Holy Spirit
+      - Soaking and silence
+  teams:
+    title: Teamwork
+    points:
+      - Building a strong team
+      - Worship through community
+      - Leadership and authority
+  ministry:
+    title: Ministry
+    points:
+      - Intercession and spiritual combat
+      - Discerning and changing atmospheres
+      - Prophecy
+  creativity:
+    title: Creativity
+    points:
+      - Songwriting
+      - Improvisation
+      - Dance, flags and movement
+  breakthrough:
+    title: Breakthrough
+    points:
+      - Personal and collective struggles
+      - Breaking through barriers to reach new levels
+      - Keys to spiritual authority
+  events:
+    title: Events
+    points:
+      - Organising worship events
+      - Houses of prayer
+      - Working across denominations
+  what_to_bring:
+    question: What should I bring with me?
+    answer: |
+      If you are a musician with a portable instrument, we would encourage you to bring it - although
+      we will also provide some instruments such as piano, guitar and drums. It is strongly advised
+      that you bring a portable computer or tablet for taking notes.
+
+      Regarding bedding: sheets and blankets will be available, as well as washing machines.
+  own_room:
+    question: Will I have my own room?
+    answer: |
+      We will have access to plenty of rooms with both single and double beds, in order to try to respect
+      the sleeping needs of every one. However if you have any specific requirements, please let us know.
