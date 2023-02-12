@@ -1,16 +1,15 @@
 import Image from "next/image";
-import SevenDaysHeader from "../seven-days-header";
-import PictureBlock from "../picture-block";
-import Cta from "../cta";
+import beachHouse from "../assets/beach-house.jpg";
+import house from "../assets/house.png";
+import lakeOrange from "../assets/lake-orange.png";
 import sethAndAnaOrange from "../assets/seth-and-ana-orange.png";
 import tableOrange from "../assets/table-orange.png";
-import lakeOrange from "../assets/lake-orange.png";
-import house from "../assets/house.png";
-import beachHouse from "../assets/beach-house.jpg";
+import Cta from "../cta";
+import PictureBlock from "../picture-block";
 import Section from "../section";
-import Translate, { t } from "./translate";
+import SevenDaysHeader from "../seven-days-header";
 import i18n from "./page.yml";
-import ReactPlayer from "react-player";
+import Translate from "./translate";
 import Video from "./video";
 
 function HouseDiagram({ lng }: { lng: string }) {
@@ -69,7 +68,9 @@ export default function Home({ params: { lng } }: { params: { lng: string } }) {
         center
         className="border-b-2 pb-16 border-stone-300 dark:border-stone-600"
       >
-        <p className="text-4xl">21 à 28 d&rsquo;Avril</p>
+        <p className="text-4xl">
+          <Translate i18n={i18n} code="date" lng={lng} />
+        </p>
         <p className="text-xl mt-4">
           Domaine de Laouenekaat
           <br />
