@@ -2,7 +2,6 @@ import buildingOrange from "../../assets/building-orange.png";
 import PictureBlock from "../../picture-block";
 import Tick from "../../assets/icon-tick.svg";
 import Cross from "../../assets/icon-cross.svg";
-import Cta from "../../cta";
 import Section from "../../section";
 import Translate, { t } from "../translate";
 import i18n from "./pricing.yml";
@@ -11,10 +10,12 @@ function PricingMobileItem({
   accommodation,
   meals,
   price,
+  lng,
 }: {
   accommodation?: boolean;
   meals: number;
   price: number;
+  lng: string;
 }) {
   return (
     <div className="flex gap-4 text-xl justify-center py-8 px-4 bg-stone-200 dark:bg-[rgba(18,17,17,0.25)] my-8 rounded-lg">
@@ -23,7 +24,9 @@ function PricingMobileItem({
         <div>
           <Tick width="24" height="24" className="mx-auto" />
         </div>
-        <div>Formation</div>
+        <div>
+          <Translate lng={lng} i18n={i18n} code="training" />
+        </div>
         <div>
           {accommodation ? (
             <Tick width="24" height="24" className="mx-auto" />
@@ -31,9 +34,13 @@ function PricingMobileItem({
             <Cross width="24" height="24" className="mx-auto" />
           )}
         </div>
-        <div>Hébergement</div>
+        <div>
+          <Translate lng={lng} i18n={i18n} code="accommodation" />
+        </div>
         <div className="font-bold text-center">{meals}</div>
-        <div>Repas</div>
+        <div>
+          <Translate lng={lng} i18n={i18n} code="meals" />
+        </div>
       </div>
     </div>
   );
@@ -50,18 +57,19 @@ export default function Pricing({
         image={buildingOrange}
         title={t({ lng, i18n, code: "pricing" })}
         alt="Domaine de Laouenekaat building"
+        priority
       />
 
       <Section container="md" className="text-xl md:text-3xl">
-        <p>
+        <div className="spacing-y-8">
           <Translate i18n={i18n} code="total_cost_is" lng={lng} formatted />
-        </p>
+        </div>
       </Section>
 
       <Section container="md">
         <div className="md:hidden">
-          <PricingMobileItem price={500} accommodation meals={3} />
-          <PricingMobileItem price={350} meals={2} />
+          <PricingMobileItem lng={lng} price={500} accommodation meals={3} />
+          <PricingMobileItem lng={lng} price={350} meals={2} />
         </div>
 
         <table className="table-pricing hidden md:table">
@@ -120,34 +128,37 @@ export default function Pricing({
             </tr>
           </tbody>
           <tfoot>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>
-              <Translate code="3_12_years" lng={lng} i18n={i18n} />
-            </td>
-            <td>
-              <Translate code="0_2_years" lng={lng} i18n={i18n} />
-            </td>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <Translate code="3_12_years" lng={lng} i18n={i18n} />
+              </td>
+              <td>
+                <Translate code="0_2_years" lng={lng} i18n={i18n} />
+              </td>
+            </tr>
           </tfoot>
         </table>
       </Section>
 
       <Section container="md" className="text-xl md:text-2xl">
-        <p>
-          <Translate code="children_info" lng={lng} i18n={i18n} />
-        </p>
+        <div className="spacing-y-8">
+          <Translate code="children_info" lng={lng} i18n={i18n} formatted />
+        </div>
 
         <h2 className="text-2xl md:text-3xl mt-8 mb-2 text-primary">
           <Translate code="how_to_pay.title" lng={lng} i18n={i18n} />
         </h2>
-        <p>
-          <Translate code="how_to_pay.content" lng={lng} i18n={i18n} />
-        </p>
-      </Section>
-
-      <Section>
-        <Cta lng={lng} />
+        <div className="spacing-y-8">
+          <Translate
+            code="how_to_pay.content"
+            lng={lng}
+            i18n={i18n}
+            formatted
+          />
+        </div>
       </Section>
     </>
   );

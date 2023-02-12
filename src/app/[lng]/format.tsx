@@ -17,7 +17,6 @@ const applyFormatting = (
   } else if (part.match(BOLD)) {
     return <strong className="font-bold">{part.replace(BOLD, "$1")}</strong>;
   } else {
-    console.log(part);
     return part;
   }
 };

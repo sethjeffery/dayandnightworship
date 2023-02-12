@@ -60,6 +60,7 @@ export default function Home({ params: { lng } }: { params: { lng: string } }) {
         image={sethAndAnaOrange}
         alt="Seth and Ana"
         title="Day and Night Worship"
+        priority
       />
 
       <SevenDaysHeader lng={lng} i18n={i18n} code="deep_training_section" />

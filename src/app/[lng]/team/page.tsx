@@ -38,6 +38,7 @@ export default function Team({ params: { lng } }: { params: { lng: string } }) {
         image={instrumentsOrange}
         alt="Instruments and people"
         title={t({ code: "team", lng, i18n })}
+        priority
       />
 
       <TeamPerson lng={lng} code="sethAndAna" image={sethAndAnaOutside} />

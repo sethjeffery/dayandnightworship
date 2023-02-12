@@ -2,18 +2,16 @@
 
 import dayAndNightIcon from "@/app/assets/day-and-night-icon.png";
 import LogoText from "@/app/assets/day-and-night-logo.svg";
-import DropdownArrow from "@/app/assets/dropdown-arrow.svg";
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
-import { useClickAway } from "react-use";
-import { twMerge } from "tailwind-merge";
+import { useClickAway, useMountedState } from "react-use";
 import Translate, { t } from "./translate";
 import I18nLink from "./i18n-link";
-import NavbarI18nLink from "./navbar-i18n-link";
 import i18n from "./navbar.yml";
-import FlagFr from "@/app/assets/flag-fr.svg";
-import FlagEn from "@/app/assets/flag-en.svg";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const NavbarI18n = dynamic(() => import("./navbar-i18n"));
 
 interface NavbarItem {
   href: string;
@@ -53,43 +51,13 @@ function NavbarButton({ href, text }: NavbarItem) {
   );
 }
 
-function NavbarI18n({ lng }: { lng: string }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const Flag = lng === "en" ? FlagEn : FlagFr;
-  const refI18nArea = useRef(null);
-  useClickAway(refI18nArea, () => setIsOpen(false));
-
-  return (
-    <li className="relative" ref={refI18nArea}>
-      <button onClick={() => setIsOpen(!isOpen)} className="block p-3 md:p-0">
-        <span className="flex items-center gap-1 cursor-pointer">
-          <Flag height="24" width="24" />
-          <DropdownArrow className="w-4 h-4" />
-        </span>
-      </button>
-      <div
-        className={twMerge(
-          "md:transition-all md:absolute top-full md:mt-6 right-0 text-left font-sans bg-white dark:bg-[rgba(0,0,0,0.8)] rounded-lg md:shadow-lg origin-top",
-          isOpen
-            ? "opacity-100 scale-100"
-            : "hidden md:block opacity-0 invisible scale-75"
-        )}
-      >
-        <ul className="md:py-2">
-          <NavbarI18nLink Flag={FlagFr} lng="fr" text="Français" />
-          <NavbarI18nLink Flag={FlagEn} lng="en" text="English" />
-        </ul>
-      </div>
-    </li>
-  );
-}
-
 export default function Navbar({ lng }: { lng: string }) {
   const [isOpen, setIsOpen] = useState(false);
+  const isMounted = useMountedState();
 
-  // on clicking outside navbar, close it
+  const handleToggle = () => isMounted() && setIsOpen(!isOpen);
   const refNavbarArea = useRef(null);
-  useClickAway(refNavbarArea, () => setIsOpen(false));
+  useClickAway(refNavbarArea, () => isMounted() && setIsOpen(false));
 
   const navbarItems = useMemo<NavbarItem[]>(
     () => [
@@ -146,7 +114,7 @@ export default function Navbar({ lng }: { lng: string }) {
           className="inline-flex items-center p-2 text-sm text-stone-500 rounded-lg md:hidden hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-stone-200 dark:hover:bg-stone-800 dark:focus:ring-stone-700"
           aria-controls="navbar-default"
           aria-expanded="false"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleToggle}
         >
           <span className="sr-only">Open main menu</span>
           <svg

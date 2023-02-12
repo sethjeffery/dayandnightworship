@@ -17,11 +17,13 @@ export default function PictureBlock({
   alt,
   title,
   objectPosition = "center",
+  priority = false,
 }: {
   image: StaticImageData;
   alt: string;
   title?: string;
   objectPosition?: "left" | "center" | "right";
+  priority?: boolean;
 }) {
   return (
     <Section className="md:block h-[calc(min(max(240px,26vw),400px))] bg-orange-400 bg-cover bg-center items-center relative mt-0">
@@ -35,6 +37,7 @@ export default function PictureBlock({
         className={`object-cover w-full h-full ${objectPositionClassName(
           objectPosition
         )}`}
+        priority={priority}
         alt={alt}
       />
     </Section>

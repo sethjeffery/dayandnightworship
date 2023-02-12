@@ -29,6 +29,7 @@ export default function Info({ params: { lng } }: { params: { lng: string } }) {
         image={questionsOrange}
         title={t({ lng, code: "info", i18n })}
         alt="Question marks"
+        priority
       />
 
       <Section container="lg" className="text-xl md:text-2xl">
