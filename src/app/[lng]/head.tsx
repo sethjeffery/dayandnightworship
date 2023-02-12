@@ -1,7 +1,8 @@
-export default function Head() {
+import { PageProps } from "./page-props";
+
+export default function Head({ params: { lng } }: PageProps) {
   return (
     <>
-      <title>Day and Night Worship</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
         name="description"

@@ -5,6 +5,8 @@ import Cross from "../../assets/icon-cross.svg";
 import Section from "../../section";
 import Translate, { t } from "../translate";
 import i18n from "./pricing.yml";
+import Canonicals from "../canonicals";
+import { PageProps } from "../page-props";
 
 function PricingMobileItem({
   accommodation,
@@ -46,11 +48,7 @@ function PricingMobileItem({
   );
 }
 
-export default function Pricing({
-  params: { lng },
-}: {
-  params: { lng: string };
-}) {
+export default function Pricing({ params: { lng } }: PageProps) {
   return (
     <>
       <PictureBlock

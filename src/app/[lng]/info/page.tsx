@@ -6,6 +6,7 @@ import Translate, { t, tArray } from "../translate";
 import i18n from "./info.yml";
 import I18nLink from "../i18n-link";
 import Link from "next/link";
+import { PageProps } from "../page-props";
 
 function Teaching({ lng, code }: { lng: string; code: string }) {
   return (
@@ -22,7 +23,7 @@ function Teaching({ lng, code }: { lng: string; code: string }) {
   );
 }
 
-export default function Info({ params: { lng } }: { params: { lng: string } }) {
+export default function Info({ params: { lng } }: PageProps) {
   return (
     <>
       <PictureBlock
@@ -136,7 +137,3 @@ export default function Info({ params: { lng } }: { params: { lng: string } }) {
     </>
   );
 }
-
-export const config = {
-  runtime: "experimental-edge",
-};

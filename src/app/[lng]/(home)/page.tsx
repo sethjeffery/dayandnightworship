@@ -1,19 +1,18 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import beachHouse from "../assets/beach-house.jpg";
-import house from "../assets/house.png";
-import lakeOrange from "../assets/lake-orange.png";
-import sethAndAnaOrange from "../assets/seth-and-ana-orange.png";
-import tableOrange from "../assets/table-orange.png";
-import Cta from "../cta";
-import PictureBlock from "../picture-block";
-import Section from "../section";
-import SevenDaysHeader from "../seven-days-header";
+import beachHouse from "../../assets/beach-house.jpg";
+import house from "../../assets/house.png";
+import lakeOrange from "../../assets/lake-orange.png";
+import sethAndAnaOrange from "../../assets/seth-and-ana-orange.png";
+import tableOrange from "../../assets/table-orange.png";
+import Cta from "../../cta";
+import PictureBlock from "../../picture-block";
+import Section from "../../section";
+import SevenDaysHeader from "../../seven-days-header";
 import i18n from "./page.yml";
-import Translate from "./translate";
-
-const Video = dynamic(() => import("./video"), { ssr: false });
+import Translate from "../translate";
+import Video from "../video";
 
 function HouseDiagram({ lng }: { lng: string }) {
   return (

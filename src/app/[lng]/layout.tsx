@@ -1,5 +1,6 @@
 import { Caladea, Caveat } from "@next/font/google";
 import "../globals.css";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
@@ -7,14 +8,14 @@ const caladea = Caladea({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--font-caladea",
-  display: "optional",
+  display: "swap",
 });
 
 const caveat = Caveat({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-caveat",
-  display: "optional",
+  display: "swap",
 });
 
 const languages = ["en", "fr"];

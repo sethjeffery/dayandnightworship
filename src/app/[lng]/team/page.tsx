@@ -12,6 +12,7 @@ import i18n from "./team.yml";
 import { StaticImageData } from "next/image";
 import Translate, { t } from "../translate";
 import dynamic from "next/dynamic";
+import { PageProps } from "../page-props";
 
 const EmailLink = dynamic(() => import("../../email-link"), { ssr: false });
 
@@ -33,7 +34,7 @@ function TeamPerson({ lng, code, image }: TeamPersonProps) {
   );
 }
 
-export default function Team({ params: { lng } }: { params: { lng: string } }) {
+export default function Team({ params: { lng } }: PageProps) {
   return (
     <>
       <PictureBlock
@@ -59,7 +60,3 @@ export default function Team({ params: { lng } }: { params: { lng: string } }) {
     </>
   );
 }
-
-export const config = {
-  runtime: "experimental-edge",
-};
