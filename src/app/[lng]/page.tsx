@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import beachHouse from "../assets/beach-house.jpg";
 import house from "../assets/house.png";
 import lakeOrange from "../assets/lake-orange.png";
@@ -133,27 +134,27 @@ export default function Home({ params: { lng } }: { params: { lng: string } }) {
           <div className="relative p-4 md:p-8 shadow bg-white text-black">
             <Image src={beachHouse} alt="House near Plage de Kercambre" />
             <p className="text-center mt-2 font-handwriting">
-              <a
+              <Link
                 href="https://goo.gl/maps/U9MvHGUnZd1sNdnVA"
                 target="_blank"
                 rel="noreferrer"
                 className="underline hover:text-primary"
               >
                 Plage de Kercambre
-              </a>{" "}
+              </Link>{" "}
               <Translate
                 i18n={i18n}
                 lng={lng}
                 code="refreshment_section.is_a_short_distance_from"
               />{" "}
-              <a
+              <Link
                 href="https://goo.gl/maps/hZfbibhZd2DmKcry8"
                 target="_blank"
                 rel="noreferrer"
                 className="underline hover:text-primary"
               >
                 Domaine de Laouenekaat
-              </a>
+              </Link>
             </p>
           </div>
         </div>

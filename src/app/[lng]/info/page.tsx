@@ -5,6 +5,7 @@ import Cta from "../../cta";
 import Translate, { t, tArray } from "../translate";
 import i18n from "./info.yml";
 import I18nLink from "../i18n-link";
+import Link from "next/link";
 
 function Teaching({ lng, code }: { lng: string; code: string }) {
   return (
@@ -45,14 +46,14 @@ export default function Info({ params: { lng } }: { params: { lng: string } }) {
             <Translate code="where.question" i18n={i18n} lng={lng} />
           </h2>
           <p>
-            <a
+            <Link
               href="https://goo.gl/maps/mSkaePUd2t6moEXh7"
               target="_blank"
               rel="noreferrer"
               className="underline hover:text-primary"
             >
               Domaine de Laouenekaat
-            </a>
+            </Link>
             , 29 Route de Kergoff, 56730 Saint-Gildas-de-Rhuys.
           </p>
         </div>

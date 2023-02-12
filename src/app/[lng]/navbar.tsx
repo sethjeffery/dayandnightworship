@@ -13,6 +13,7 @@ import NavbarI18nLink from "./navbar-i18n-link";
 import i18n from "./navbar.yml";
 import FlagFr from "@/app/assets/flag-fr.svg";
 import FlagEn from "@/app/assets/flag-en.svg";
+import Link from "next/link";
 
 interface NavbarItem {
   href: string;
@@ -42,12 +43,12 @@ function NavbarLink({ href, text, lng }: I18nNavbarItem) {
 function NavbarButton({ href, text }: NavbarItem) {
   return (
     <li>
-      <a
+      <Link
         href={href}
         className="mt-2 md:mt-0 block whitespace-nowrap rounded bg-primary text-md text-white px-4 py-2 hover:brightness-110 animate-button-ping-primary font-sans"
       >
         {text}
-      </a>
+      </Link>
     </li>
   );
 }
@@ -75,8 +76,8 @@ function NavbarI18n({ lng }: { lng: string }) {
         )}
       >
         <ul className="md:py-2">
-          <NavbarI18nLink Flag={FlagFr} lang="fr" text="Français" />
-          <NavbarI18nLink Flag={FlagEn} lang="en" text="English" />
+          <NavbarI18nLink Flag={FlagFr} lng="fr" text="Français" />
+          <NavbarI18nLink Flag={FlagEn} lng="en" text="English" />
         </ul>
       </div>
     </li>
@@ -118,7 +119,11 @@ export default function Navbar({ lng }: { lng: string }) {
         className="grid grid-cols-[1fr_40px] md:flex items-center justify-between mx-auto"
         ref={refNavbarArea}
       >
-        <a href={siteUrl} className="flex items-center gap-2 mr-8">
+        <I18nLink
+          lng={lng}
+          href={siteUrl}
+          className="flex items-center gap-2 mr-8"
+        >
           <Image
             src={dayAndNightIcon}
             alt="Day and Night Worship icon"
@@ -134,7 +139,7 @@ export default function Navbar({ lng }: { lng: string }) {
           <span className="hidden lg:inline opacity-50 pt-[2px] text-xl whitespace-nowrap">
             <Translate code="school_of_worship" lng={lng} i18n={i18n} />
           </span>
-        </a>
+        </I18nLink>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
