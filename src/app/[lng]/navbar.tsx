@@ -6,12 +6,13 @@ import DropdownArrow from "@/app/assets/dropdown-arrow.svg";
 import Image from "next/image";
 import { useMemo, useRef, useState } from "react";
 import { useClickAway } from "react-use";
-import Flag from "react-world-flags";
 import { twMerge } from "tailwind-merge";
 import Translate, { t } from "./translate";
 import I18nLink from "./i18n-link";
 import NavbarI18nLink from "./navbar-i18n-link";
 import i18n from "./navbar.yml";
+import FlagFr from "@/app/assets/flag-fr.svg";
+import FlagEn from "@/app/assets/flag-en.svg";
 
 interface NavbarItem {
   href: string;
@@ -53,7 +54,7 @@ function NavbarButton({ href, text }: NavbarItem) {
 
 function NavbarI18n({ lng }: { lng: string }) {
   const [isOpen, setIsOpen] = useState(false);
-  const flagCode = lng === "en" ? "gb" : lng;
+  const Flag = lng === "en" ? FlagEn : FlagFr;
   const refI18nArea = useRef(null);
   useClickAway(refI18nArea, () => setIsOpen(false));
 
@@ -61,7 +62,7 @@ function NavbarI18n({ lng }: { lng: string }) {
     <li className="relative" ref={refI18nArea}>
       <button onClick={() => setIsOpen(!isOpen)} className="block p-3 md:p-0">
         <span className="flex items-center gap-1 cursor-pointer">
-          <Flag code={flagCode} height="24" width="24" />
+          <Flag height="24" width="24" />
           <DropdownArrow className="w-4 h-4" />
         </span>
       </button>
@@ -74,8 +75,8 @@ function NavbarI18n({ lng }: { lng: string }) {
         )}
       >
         <ul className="md:py-2">
-          <NavbarI18nLink flag="fr" lang="fr" text="Français" />
-          <NavbarI18nLink flag="gb" lang="en" text="English" />
+          <NavbarI18nLink Flag={FlagFr} lang="fr" text="Français" />
+          <NavbarI18nLink Flag={FlagEn} lang="en" text="English" />
         </ul>
       </div>
     </li>

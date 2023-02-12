@@ -1,12 +1,11 @@
 import { usePathname } from "next/navigation";
-import Flag from "react-world-flags";
 
 export default function NavbarI18nLink({
-  flag,
+  Flag,
   lang,
   text,
 }: {
-  flag: string;
+  Flag: any;
   lang: string;
   text: string;
 }) {
@@ -20,7 +19,7 @@ export default function NavbarI18nLink({
         href={path}
         className="flex items-center gap-2 py-2 px-3 md:px-4 hover:text-primary"
       >
-        <Flag code={flag} height="24" width="24" className="max-w-none" />
+        <Flag height="24" width="24" className="max-w-none" />
         {text}
       </a>
     </li>
