@@ -1,10 +1,10 @@
 import questionsOrange from "../../assets/questions-orange.png";
 import PictureBlock from "../../picture-block";
 import Section from "../../section";
-import Link from "next/link";
 import Cta from "../../cta";
 import Translate, { t, tArray } from "../translate";
 import i18n from "./info.yml";
+import I18nLink from "../i18n-link";
 
 function Teaching({ lng, code }: { lng: string; code: string }) {
   return (
@@ -61,13 +61,25 @@ export default function Info({ params: { lng } }: { params: { lng: string } }) {
           <h2 className="text-2xl md:text-3xl mb-2 text-primary">
             <Translate code="how_much.question" i18n={i18n} lng={lng} />
           </h2>
-          <p>
-            <Translate code="how_much.answer" i18n={i18n} lng={lng} />
-            <Link href="/pricing" className="underline hover:text-primary">
-              <Translate code="how_much.pricing" i18n={i18n} lng={lng} />
-            </Link>
-            <Translate code="how_much.answer_end" i18n={i18n} lng={lng} />
-          </p>
+          <div className="space-y-8">
+            <Translate
+              code="how_much.answer"
+              i18n={i18n}
+              lng={lng}
+              interpolate={{
+                pricing: (
+                  <I18nLink
+                    lng={lng}
+                    href="/pricing"
+                    className="underline hover:text-primary"
+                  >
+                    <Translate lng={lng} i18n={i18n} code="how_much.pricing" />
+                  </I18nLink>
+                ),
+              }}
+              formatted
+            />
+          </div>
         </div>
 
         <div className="my-8">

@@ -7,9 +7,8 @@ fr:
     question: Où cela se passe-t-il?
   how_much:
     question: Combien est-ce et comment dois-je payer ?
-    answer: Veuillez consulter la page
-    answer_pricing: tarifs
-    answer_end: pour plus d’informations sur les prix.
+    answer: Veuillez consulter la page {{pricing}} pour plus d’informations sur les prix.
+    pricing: tarification
   what_teaching:
     question: Quel sera l’enseignement ?
     answer: "L’enseignement se concentrera sur six catégories tout au long de la semaine, avec des ateliers et des séances spécifiques :"
@@ -73,9 +72,8 @@ en:
     question: Where will it take place?
   how_much:
     question: How much is it and how do I pay?
-    answer: Please see the page for
-    answer_pricing: pricing
-    answer_end: for more information about the costs.
+    answer: Please see the page for {{pricing}} for more information about the costs.
+    pricing: pricing
   what_teaching:
     question: What will be the teaching?
     answer: "The teaching will mostly focus on six categories throughout the week, with practical workshops and specific teachings :"

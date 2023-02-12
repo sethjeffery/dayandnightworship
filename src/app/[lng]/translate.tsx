@@ -1,5 +1,5 @@
 import get from "lodash/get";
-import snarkdown from "snarkdown";
+import Format from "./format";
 
 const fallbackLng = "fr";
 
@@ -8,18 +8,26 @@ interface I18nProps {
   i18n: any;
   code: string;
   formatted?: boolean;
+  interpolate?: Record<string, JSX.Element | string>;
 }
 
-const format = (str: string) =>
-  str
-    .split(/\n\n/)
-    .map((p, index) => (
-      <p key={index} dangerouslySetInnerHTML={{ __html: snarkdown(p) }} />
-    ));
-
-const Translate = ({ lng, i18n, code, formatted }: I18nProps) => (
-  <>{formatted ? format(t({ lng, i18n, code })) : t({ lng, i18n, code })}</>
-);
+const Translate = ({
+  lng,
+  i18n,
+  code,
+  formatted,
+  interpolate = {},
+}: I18nProps) => {
+  return (
+    <>
+      {formatted ? (
+        <Format interpolate={interpolate} text={t({ lng, i18n, code })} />
+      ) : (
+        t({ lng, i18n, code })
+      )}
+    </>
+  );
+};
 
 export const t = ({ lng, i18n, code }: I18nProps): string =>
   get(i18n[lng], code) || get(i18n[fallbackLng], code);
