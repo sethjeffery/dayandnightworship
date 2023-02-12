@@ -163,7 +163,3 @@ export default function Home({ params: { lng } }: { params: { lng: string } }) {
     </>
   );
 }
-
-export const config = {
-  runtime: "experimental-edge",
-};
