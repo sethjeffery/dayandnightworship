@@ -87,9 +87,8 @@ export default function Navbar({ lng }: { lng: string }) {
         className="grid grid-cols-[1fr_40px] md:flex items-center justify-between mx-auto"
         ref={refNavbarArea}
       >
-        <I18nLink
-          lng={lng}
-          href={siteUrl}
+        <Link
+          href={`${siteUrl}${lng}`}
           className="flex items-center gap-2 mr-8"
         >
           <Image
@@ -107,7 +106,7 @@ export default function Navbar({ lng }: { lng: string }) {
           <span className="hidden lg:inline opacity-50 pt-[2px] text-xl whitespace-nowrap">
             <Translate code="school_of_worship" lng={lng} i18n={i18n} />
           </span>
-        </I18nLink>
+        </Link>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
