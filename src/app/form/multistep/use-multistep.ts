@@ -25,15 +25,20 @@ export default function useMultistep() {
     },
   });
 
-  const moveNext = useCallback(
-    (newValues: Partial<MultistepFormValues>) => {
+  const moveTo = useCallback(
+    (to: number, newValues: Partial<MultistepFormValues>) => {
       setState(({ values }) => ({
         values: { ...values, ...omitNulls(newValues) },
         history: [...history, step],
-        step: step + 1,
+        step: to,
       }));
     },
     [step, history]
+  );
+
+  const moveNext = useCallback(
+    (newValues: Partial<MultistepFormValues>) => moveTo(step + 1, newValues),
+    [step, moveTo]
   );
 
   const moveBack = useCallback(() => {
@@ -49,5 +54,6 @@ export default function useMultistep() {
     values,
     moveNext,
     moveBack,
+    moveTo,
   };
 }
