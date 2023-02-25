@@ -10,6 +10,7 @@ import I18nLink from "./i18n-link";
 import i18n from "./navbar.yml";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import NavbarCta from "./navbar-cta";
 
 const NavbarI18n = dynamic(() => import("./navbar-i18n"));
 
@@ -57,7 +58,7 @@ export default function Navbar({ lng }: { lng: string }) {
 
   const handleToggle = () => isMounted() && setIsOpen(!isOpen);
   const refNavbarArea = useRef(null);
-  useClickAway(refNavbarArea, () => isMounted() && setIsOpen(false));
+  useClickAway(refNavbarArea, () => isMounted() && setIsOpen(false), ["click"]);
 
   const navbarItems = useMemo<NavbarItem[]>(
     () => [
@@ -138,10 +139,7 @@ export default function Navbar({ lng }: { lng: string }) {
               <NavbarLink key={navbarItem.text} {...navbarItem} lng={lng} />
             ))}
             <NavbarI18n lng={lng} />
-            <NavbarButton
-              href="https://sg5uurechhp.typeform.com/to/V2wr070P"
-              text={t({ lng, i18n, code: "register" })}
-            />
+            <NavbarCta lng={lng} />
           </ul>
         </div>
       </div>

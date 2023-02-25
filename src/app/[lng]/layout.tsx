@@ -41,10 +41,11 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="bg-background dark:bg-stone-800 dark:text-stone-200">
+      <body className="bg-background dark:bg-background-dark dark:text-stone-200">
         <Navbar lng={lng} />
         {children}
         <Footer lng={lng} />
+        <div id="modal"></div>
       </body>
     </html>
   );

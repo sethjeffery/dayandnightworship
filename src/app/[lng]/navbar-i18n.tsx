@@ -13,7 +13,7 @@ export default function NavbarI18n({ lng }: { lng: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const Flag = lng === "en" ? FlagEn : FlagFr;
   const refI18nArea = useRef(null);
-  useClickAway(refI18nArea, () => isMounted() && setIsOpen(false));
+  useClickAway(refI18nArea, () => isMounted() && setIsOpen(false), ["click"]);
   const handleToggle = () => isMounted() && setIsOpen(!isOpen);
 
   return (

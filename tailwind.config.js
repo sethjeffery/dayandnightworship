@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#F4EDE6",
+        background: "#faf7f5",
+        "background-dark": "#262524",
+        input: "#ffffff",
+        "input-dark": "#151413",
         primary: "#EB7A00",
         secondary: "#006AEB",
       },
@@ -31,5 +34,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
 };

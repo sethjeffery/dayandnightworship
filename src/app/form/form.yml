@@ -1,0 +1,115 @@
+fr:
+  title: S’inscrire
+  intro:
+    title: Merci de vous présenter !
+  full_name:
+    title: Prénom et Nom
+    required: Le nom est requis
+  age:
+    title: Âge
+    required: Age est requis
+  next: Suivant ›
+  back: ‹ Précédent
+  submit: Confirmer
+  free: Gratuit !
+  close: Fermer
+  half_price: À moitié prix !
+  stay:
+    title: Choisissez votre type de séjour
+    subtitle: Nous aimons la communauté ! Voulez-vous une chambre ? Les prix sont par personne pour toute la semaine, 21 à 28 avril.
+    required: Veuillez choisir une option
+  stay_youth:
+    title: Choisissez votre type de séjour
+    subtitle: Les enfants séjournent à moitié prix. Nous avons une aire de jeux dédiée et une petite aide pour la garde des enfants.
+  stay_infant:
+    title: Choisissez votre type de séjour
+    subtitle: Il n'y a pas de frais pour les bébés et les tout-petits, mais nous n'avons pas de service de garde dédié pour eux.
+  stay_full: € 500 - Pension complète et logement
+  stay_days: € 350 - Déjeuner et dîner, sans hébergement
+  stay_youth_full: € 250 - Pension complète et logement
+  stay_youth_days: € 175 - Déjeuner et dîner, sans hébergement
+  stay_infant_full: €0
+  ministry:
+    title: Appartenez-vous à une équipe de louange ou à un ministère ?
+    subtitle: Si oui, veuillez écrire ci-dessous.
+  skills:
+    title: Avez-vous des compétences dans certains des domaines suivants ?
+    subtitle: Ce ne sont pas nécessaires mais cela nous aidera à nous organiser.
+    singing: Chant
+    piano: Piano
+    guitar: Guitare / Basse
+    drums: Batterie / Percussion
+    dance: Danse / Bannières
+    other: Autre...
+    other_specify: Veuillez préciser
+  motivation:
+    title: Qu'est-ce qui vous motive à faire cette école de louange ?
+  contact:
+    title: Dernière étape ...
+    subtitle: Nous avons juste besoin de quelques coordonnées pour vous informer de l'événement.
+  email:
+    title: Adresse e-mail
+    required: Adresse e-mail est nécessaire
+  phone:
+    title: Numéro de téléphone
+  thankyou:
+    title: Merci !
+    subtitle: Nous avons bien reçu vos informations et vous répondrons sous peu !
+
+en:
+  title: Register
+  intro:
+    title: Please introduce yourself!
+  full_name:
+    title: Your name
+    required: Full name is required
+  age:
+    title: Your age
+    required: Age is required
+  next: Next ›
+  back: ‹ Back
+  submit: Send
+  free: Free!
+  close: Close
+  half_price: Half price!
+  stay:
+    title: What will be your stay?
+    subtitle: We love community! We have rooms for attendees to stay the night, prices are per person for the whole week.
+    required: Please specify
+  stay_youth:
+    title: What will be your stay?
+    subtitle: Children stay for half price. We have a dedicated play area and a little help for childcare.
+  stay_infant:
+    title: What will be your stay?
+    subtitle: There is no cost for babies and toddlers, but we do not have a dedicated childcare service for them.
+  stay_full: €500 - Teaching, 3 meals and accommodation
+  stay_days: €350 - Teaching, lunch + dinner
+  stay_youth_full: €250 - Teaching, 3 meals and accommodation
+  stay_youth_days: €175 - Teaching, lunch + dinner
+  stay_infant_full: €0
+  ministry:
+    title: Are you part of a worship team or other ministry?
+    subtitle: If so, please provide details here.
+  skills:
+    title: Do you have skill in any of the following areas?
+    subtitle: These are not necessary but will help us with organisation.
+    singing: Singing
+    piano: Piano
+    guitar: Guitar / Bass
+    drums: Drums / Percussion
+    dance: Dance / Flags
+    other: Other...
+    other_specify: Please specify
+  motivation:
+    title: What motivates you to attend this worship school?
+  contact:
+    title: Final step...
+    subtitle: We just need some details to contact you about the event.
+  email:
+    title: Email address
+    required: Email address is required
+  phone:
+    title: Phone number
+  thankyou:
+    title: Thank you!
+    subtitle: We have received your information and will get back to you shortly!
