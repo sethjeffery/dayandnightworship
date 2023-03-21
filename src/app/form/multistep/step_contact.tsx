@@ -52,7 +52,7 @@ export default function StepContact({
   const handleSubmit = (newValues: Values) => {
     fetch("/api/contact", {
       method: "POST",
-      body: JSON.stringify({ ...newValues, ...values }),
+      body: JSON.stringify({ ...values, ...newValues }),
       headers: {
         "Content-Type": "application/json",
       },
