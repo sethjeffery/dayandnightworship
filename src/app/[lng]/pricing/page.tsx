@@ -5,7 +5,6 @@ import Cross from "../../assets/icon-cross.svg";
 import Section from "../../section";
 import Translate, { t } from "../translate";
 import i18n from "./pricing.yml";
-import Canonicals from "../canonicals";
 import { PageProps } from "../page-props";
 
 function PricingMobileItem({
@@ -58,87 +57,39 @@ export default function Pricing({ params: { lng } }: PageProps) {
         priority
       />
 
-      <Section container="md" className="text-xl md:text-3xl">
-        <div className="spacing-y-8">
-          <Translate i18n={i18n} code="total_cost_is" lng={lng} formatted />
-        </div>
-      </Section>
-
       <Section container="md">
-        <div className="md:hidden">
-          <PricingMobileItem lng={lng} price={500} accommodation meals={3} />
-          <PricingMobileItem lng={lng} price={350} meals={2} />
-        </div>
-
-        <table className="table-pricing hidden md:table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>500 €</th>
-              <th>350 €</th>
-              <th>250 €</th>
-              <th>0 €</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <Translate code="training" lng={lng} i18n={i18n} />
-              </th>
-              <td>
-                <Tick width="32" height="32" />
-              </td>
-              <td>
-                <Tick width="32" height="32" />
-              </td>
-              <td>
-                <Tick width="32" height="32" />
-              </td>
-              <td>
-                <Tick width="32" height="32" />
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <Translate code="meals" lng={lng} i18n={i18n} />
-              </th>
-              <td>3</td>
-              <td>2</td>
-              <td>3</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <th>
-                <Translate code="training" lng={lng} i18n={i18n} />
-              </th>
-              <td>
-                <Tick width="32" height="32" />
-              </td>
-              <td>
-                <Cross width="32" height="32" />
-              </td>
-              <td>
-                <Tick width="32" height="32" />
-              </td>
-              <td>
-                <Tick width="32" height="32" />
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <Translate code="3_12_years" lng={lng} i18n={i18n} />
-              </td>
-              <td>
-                <Translate code="0_2_years" lng={lng} i18n={i18n} />
-              </td>
-            </tr>
-          </tfoot>
-        </table>
+        <dl className="grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)] grid-flow-row text-lg sm:text-2xl gap-px">
+          <dd className="px-3 py-2 lg:py-3 rounded-tl-xl font-semibold bg-stone-200 text-right">
+            <Translate code="weekly_rate.price" i18n={i18n} lng={lng} />
+          </dd>
+          <dt className="px-3 py-2 lg:py-3 rounded-tr-xl bg-stone-200">
+            <Translate code="weekly_rate.label" i18n={i18n} lng={lng} />
+          </dt>
+          <dd className="px-3 py-2 lg:py-3 font-semibold bg-stone-200 text-right">
+            <Translate code="daily_rate.price" i18n={i18n} lng={lng} />
+          </dd>
+          <dt className="px-3 py-2 lg:py-3 bg-stone-200">
+            <Translate code="daily_rate.label" i18n={i18n} lng={lng} />
+          </dt>
+          <dd className="px-3 py-2 lg:py-3 font-semibold bg-stone-200 text-right">
+            <Translate code="weekly_rate_kids.price" i18n={i18n} lng={lng} />
+          </dd>
+          <dt className="px-3 py-2 lg:py-3 bg-stone-200">
+            <Translate code="weekly_rate_kids.label" i18n={i18n} lng={lng} />
+          </dt>
+          <dd className="px-3 py-2 lg:py-3 font-semibold bg-stone-200 text-right">
+            <Translate code="daily_rate_kids.price" i18n={i18n} lng={lng} />
+          </dd>
+          <dt className="px-3 py-2 lg:py-3 bg-stone-200">
+            <Translate code="daily_rate_kids.label" i18n={i18n} lng={lng} />
+          </dt>
+          <dd className="px-3 py-2 lg:py-3 rounded-bl-xl font-semibold bg-stone-200 text-right">
+            <Translate code="baby_rate.price" i18n={i18n} lng={lng} />
+          </dd>
+          <dt className="px-3 py-2 lg:py-3 rounded-br-xl bg-stone-200">
+            <Translate code="baby_rate.label" i18n={i18n} lng={lng} />
+          </dt>
+        </dl>
       </Section>
 
       <Section container="md" className="text-xl md:text-2xl">

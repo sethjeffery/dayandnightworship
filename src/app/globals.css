@@ -3,61 +3,26 @@
 @tailwind utilities;
 
 @layer components {
-  .table-pricing {
-    border-collapse: separate;
-    border-spacing: 0.125rem;
-    margin: auto;
-  }
-  .table-pricing tbody td,
-  .table-pricing thead th:not(:first-child),
-  .table-pricing tbody th {
+  .table-pricing dt,
+  .table-pricing dd {
     border: solid 1px transparent;
     background-color: rgb(231 229 228 / var(--tw-bg-opacity));
     padding: 0.5rem 1.5rem;
-    vertical-align: middle;
   }
   @media (prefers-color-scheme: dark) {
-    .table-pricing tbody td,
-    .table-pricing thead th:not(:first-child),
-    .table-pricing tbody th {
+    .table-pricing dt,
+    .table-pricing dd {
       background-color: rgba(18, 17, 17, 0.25);
     }
   }
-  .table-pricing thead th:nth-child(2) {
-    border-top-left-radius: 1rem;
-  }
-  .table-pricing thead th:last-child {
-    border-top-right-radius: 1rem;
-  }
-  .table-pricing tbody tr:first-child th:first-child {
-    border-top-left-radius: 1rem;
-  }
-  .table-pricing tbody tr:last-child th:first-child {
-    border-bottom-left-radius: 1rem;
-  }
-  .table-pricing tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 1rem;
-  }
-  .table-pricing thead th {
-    font-size: 1.5rem;
-    font-weight: normal;
-  }
-  .table-pricing tbody th {
+  .table-pricing dd {
     text-align: right;
     font-size: 1.5rem;
-    font-weight: normal;
+    font-weight: semi-bold;
   }
-  .table-pricing tbody td {
+  .table-pricing dt {
     font-size: 1.25rem;
-    text-align: center;
-  }
-  .table-pricing tbody td svg {
-    margin: auto;
-  }
-  .table-pricing tfoot td {
-    font-size: 0.875rem;
-    text-align: center;
-    padding: 0.25rem 1rem;
+    text-align: left;
   }
   @responsive {
     .container-md,

@@ -1,11 +1,5 @@
 fr:
   pricing: Tarification
-  total_cost_is: Le coût total par étudiant est de **500 €** pour la semaine. Nous avons également un tarif réduit pour les participants qui n’auront pas besoin d’hébergement.
-  training: Formation
-  meals: Repas
-  accommodation: Hébergement
-  3_12_years: 3-12 ans
-  0_2_years: 0-12 ans
   children_info: |
     Les jeunes enfants sont accueillis à moitié prix, et il y a une salle
     de jeux, mais veuillez noter que nous n’avons pas de garderie
@@ -15,15 +9,24 @@ fr:
     content: |
       A votre arrivée, vous pouvez payer en espèces ou par chèque à l’ordre de Day and Night Worship.
       Vous pouvez également effectuer un virement bancaire, dont nous vous communiquerons prochainement les détails.
+  weekly_rate:
+    price: € 500
+    label: Tarif à la semaine
+  daily_rate:
+    price: € 80
+    label: Tarif journalier
+  weekly_rate_kids:
+    price: € 250
+    label: Semaine, 3-12 ans
+  daily_rate_kids:
+    price: € 40
+    label: Journalier, 3-12 ans
+  baby_rate:
+    price: Gratuit
+    label: 0-2 ans
 
 en:
   pricing: Pricing
-  total_cost_is: The total cost per student is **€ 500** for the week. We also have a reduced price for participants who do not need accommodation.
-  training: Training
-  meals: Meals
-  accommodation: Accommodation
-  3_12_years: 3-12 years
-  0_2_years: 0-2 years
   children_info: |
     Young children are welcomed at half price, and there will be a play room
     for them, but please note that we will not be able to supply dedicated childcare.
@@ -32,3 +35,18 @@ en:
     content: |
       On arrival, you can pay in cash or by cheque made to Day And Night Worship.
       You can also pay by bank transfer, we will send details to those who prefer this method.
+  weekly_rate:
+    price: € 500
+    label: Weekly rate
+  daily_rate:
+    price: € 80
+    label: Daily rate
+  weekly_rate_kids:
+    price: € 250
+    label: Weekly rate, 3-12 years
+  daily_rate_kids:
+    price: € 40
+    label: Daily rate, 3-12 years
+  baby_rate:
+    price: Free
+    label: 0-2 years
