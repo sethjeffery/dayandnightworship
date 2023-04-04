@@ -46,7 +46,6 @@ export default function Team({ params: { lng } }: PageProps) {
 
       <TeamPerson lng={lng} code="sethAndAna" image={sethAndAnaOutside} />
       <TeamPerson lng={lng} code="trevAndBell" image={trevAndBell} />
-      <TeamPerson lng={lng} code="grace" image={graceTiengwelieu} />
       <TeamPerson lng={lng} code="michael" image={michaelObed} />
       <TeamPerson lng={lng} code="fernando" image={fernando} />
       <TeamPerson lng={lng} code="jason" image={jasonLeeJones} />
