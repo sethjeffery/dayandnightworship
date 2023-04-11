@@ -59,22 +59,22 @@ export default function Pricing({ params: { lng } }: PageProps) {
 
       <Section container="md">
         <dl className="grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)] grid-flow-row text-lg sm:text-2xl gap-px">
-          <dd className="px-3 py-2 lg:py-3 rounded-tl-xl font-semibold bg-stone-200 text-right">
+          <dd className="px-3 py-2 lg:py-3 rounded-tl-xl font-semibold bg-stone-200 dark:bg-stone-700 text-right">
             <Translate code="weekly_rate.price" i18n={i18n} lng={lng} />
           </dd>
-          <dt className="px-3 py-2 lg:py-3 rounded-tr-xl bg-stone-200">
+          <dt className="px-3 py-2 lg:py-3 rounded-tr-xl bg-stone-200 dark:bg-stone-700">
             <Translate code="weekly_rate.label" i18n={i18n} lng={lng} />
           </dt>
-          <dd className="px-3 py-2 lg:py-3 font-semibold bg-stone-200 text-right">
+          <dd className="px-3 py-2 lg:py-3 font-semibold bg-stone-200 dark:bg-stone-700 text-right">
             <Translate code="daily_rate.price" i18n={i18n} lng={lng} />
           </dd>
-          <dt className="px-3 py-2 lg:py-3 bg-stone-200">
+          <dt className="px-3 py-2 lg:py-3 bg-stone-200 dark:bg-stone-700">
             <Translate code="daily_rate.label" i18n={i18n} lng={lng} />
           </dt>
-          <dd className="px-3 py-2 lg:py-3 font-semibold bg-stone-200 text-right">
+          <dd className="px-3 py-2 lg:py-3 font-semibold bg-stone-200 dark:bg-stone-700 text-right">
             <Translate code="weekly_rate_kids.price" i18n={i18n} lng={lng} />
           </dd>
-          <dt className="px-3 py-2 lg:py-3 bg-stone-200">
+          <dt className="px-3 py-2 lg:py-3 bg-stone-200 dark:bg-stone-700">
             <Translate code="weekly_rate_kids.label" i18n={i18n} lng={lng} />
           </dt>
           <dd className="px-3 py-2 lg:py-3 font-semibold bg-stone-200 text-right">
@@ -83,10 +83,10 @@ export default function Pricing({ params: { lng } }: PageProps) {
           <dt className="px-3 py-2 lg:py-3 bg-stone-200">
             <Translate code="daily_rate_kids.label" i18n={i18n} lng={lng} />
           </dt>
-          <dd className="px-3 py-2 lg:py-3 rounded-bl-xl font-semibold bg-stone-200 text-right">
+          <dd className="px-3 py-2 lg:py-3 rounded-bl-xl font-semibold bg-stone-200 dark:bg-stone-700 text-right">
             <Translate code="baby_rate.price" i18n={i18n} lng={lng} />
           </dd>
-          <dt className="px-3 py-2 lg:py-3 rounded-br-xl bg-stone-200">
+          <dt className="px-3 py-2 lg:py-3 rounded-br-xl bg-stone-200 dark:bg-stone-700">
             <Translate code="baby_rate.label" i18n={i18n} lng={lng} />
           </dt>
         </dl>
