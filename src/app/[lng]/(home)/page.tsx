@@ -5,7 +5,7 @@ const graphql = String.raw;
 
 const PAGE_CONTENT_QUERY = graphql`
   query MyQuery {
-    upload(filter: { filename: { matches: { pattern: "clouds" } } }) {
+    upload(filter: { filename: { matches: { pattern: "glory" } } }) {
       filename
       video {
         streamingUrl
@@ -31,7 +31,7 @@ export default async function Home() {
 
   return (
     <main className="w-screen h-screen flex items-center justify-center relative flex-col">
-      <Video videoUrl={video.mp4Med} />
+      <Video videoUrl={video.mp4High} />
       <div className="z-10 relative text-center">
         <h1 className="text-[max(3rem,4vw)] leading-none text-white">
           Day and Night Worship
