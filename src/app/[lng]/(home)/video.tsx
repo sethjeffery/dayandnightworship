@@ -30,6 +30,7 @@ export default function Video({ videoUrl }: { videoUrl: string }) {
       autoPlay
       loop
       muted
+      playsInline
       onMouseMove={handleMouseMove}
       style={{
         filter: `hue-rotate(${hueRotate}deg) saturate(1.8) brightness(${brightness}) contrast(${contrast})`,
