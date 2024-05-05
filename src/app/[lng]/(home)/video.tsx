@@ -26,7 +26,7 @@ export default function Video({ videoUrl }: { videoUrl: string }) {
 
   return (
     <video
-      className="absolute top-0 left-0 w-full h-full object-cover transition-all duration-100"
+      className="absolute top-0 left-0 w-dvw h-dvh object-cover transition-all duration-100"
       autoPlay
       loop
       muted
