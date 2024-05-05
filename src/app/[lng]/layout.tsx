@@ -1,8 +1,5 @@
 import { Caladea, Caveat } from "@next/font/google";
 import "../globals.css";
-import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
-import Navbar from "./navbar";
-import Footer from "./footer";
 
 const caladea = Caladea({
   subsets: ["latin"],
@@ -42,10 +39,7 @@ export default function RootLayout({
       */}
       <head />
       <body className="bg-background dark:bg-background-dark dark:text-stone-200">
-        <Navbar lng={lng} />
         {children}
-        <Footer lng={lng} />
-        <div id="modal"></div>
       </body>
     </html>
   );
