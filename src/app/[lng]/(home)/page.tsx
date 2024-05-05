@@ -30,7 +30,7 @@ export default async function Home() {
   } = await performRequest({ query: PAGE_CONTENT_QUERY });
 
   return (
-    <main className="w-screen h-screen flex items-center justify-center relative flex-col">
+    <main className="w-dvw h-dvh flex items-center justify-center relative flex-col">
       <Video videoUrl={video.mp4High} />
       <div className="z-10 relative text-center">
         <h1 className="text-[max(3rem,4vw)] leading-none text-white">
